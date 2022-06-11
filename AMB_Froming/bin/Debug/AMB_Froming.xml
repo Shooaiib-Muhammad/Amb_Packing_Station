@@ -1,0 +1,616 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AMB_Froming
+</name>
+</assembly>
+<members>
+<member name="T:AMB_Froming.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AMB_Froming.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AMB_Froming.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_ArticleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Article_DDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Inv_Tran_DateDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Hours_TranDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PODDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_FormingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Daily_SumDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_SumDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_LineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_max_FromingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMB_Incentive_RFTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairPAssDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.Froming_HourllyDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Repair_QtyDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Article_Wise_FailDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Forming_RepairDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Fresh_PassDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_FreshDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Line1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Amb_ArticleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_ArticleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Article_DRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Inv_Tran_DateRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Hours_TranRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PODRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_FormingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Daily_SumRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_SumRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_LineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_max_FromingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMB_Incentive_RFTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairPAssRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.Froming_HourllyRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Repair_QtyRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Article_Wise_FailRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Forming_RepairRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Fresh_PassRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_FreshRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Line1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Amb_ArticleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_ArticleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Article_DRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Inv_Tran_DateRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Hours_TranRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PODRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_PORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_FormingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Daily_SumRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_SumRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_LineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_max_FromingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMB_Incentive_RFTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_RepairPAssRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.Froming_HourllyRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Repair_QtyRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_Article_Wise_FailRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Forming_RepairRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Fresh_PassRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.View_AMb_Article_Wise_FreshRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_PC_AMB_Line1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMB.tbl_Pro_Amb_ArticleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_Pro_ArticleTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_Pro_Article_DTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_Inv_Tran_DateTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_PC_AMB_Hours_TranTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_PODTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_POTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_FormingTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_Daily_SumTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_Article_Wise_SumTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_PC_AMB_LineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_max_FromingTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMB_Incentive_RFTTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_RepairTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_RepairPAssTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.Froming_HourllyTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_Repair_QtyTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_Article_Wise_FailTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_Forming_RepairTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_Fresh_PassTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.View_AMb_Article_Wise_FreshTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_PC_AMB_Line1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.tbl_Pro_Amb_ArticleTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.UpdateUpdatedRows(AMB_Froming.DSAMB,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.UpdateInsertedRows(AMB_Froming.DSAMB,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.UpdateDeletedRows(AMB_Froming.DSAMB,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.UpdateAll(AMB_Froming.DSAMB)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AMB_Froming.DSAMBTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.View_Pro_Article_BarCodeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCode_TransactionsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.view_Production_PackingDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.View_Pro_Article_BarCodeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCode_TransactionsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.view_Production_PackingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.View_Pro_Article_BarCodeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCode_TransactionsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.view_Production_PackingRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.View_Pro_Article_BarCodeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.tbl_Pro_Article_BarCode_TransactionsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.view_Production_PackingTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateUpdatedRows(AMB_Froming.DSproduction,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateInsertedRows(AMB_Froming.DSproduction,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateDeletedRows(AMB_Froming.DSproduction,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateAll(AMB_Froming.DSproduction)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
