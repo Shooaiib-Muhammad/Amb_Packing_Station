@@ -665,7 +665,8 @@ Public Class Form1
     End Sub
     Private Sub Data()
 
-
+        txtCardNo.Text = ""
+        txtCardNo.Focus()
 
         Try
             Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), ArtCodeComboBox.SelectedValue, Val(DayNoLabel1.Text), Label37.Text)
