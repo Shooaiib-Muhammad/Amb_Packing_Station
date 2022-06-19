@@ -62,7 +62,7 @@ Public Class Form1
     Private Declare Function SQLConfigDataSource Lib "ODBCCP32.DLL" (ByVal hwndParent As Integer, ByVal fRequest As Integer, ByVal lpszDriver As String, ByVal lpszAttributes As String) As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtCardNo.Focus()
         CreateSystemDSN()
 
         'TODO: This line of code loads data into the 'DSAMB.tbl_PC_AMB_Line' table. You can move, or remove it, as needed.
@@ -122,7 +122,7 @@ Public Class Form1
         Timer2.Interval = 1000
         Timer2.Start()
 
-
+        txtCardNo.Focus()
         values()
         DayID()
 
@@ -142,7 +142,7 @@ Public Class Form1
     End Sub
 
     Private Sub values()
-
+        txtCardNo.Focus()
         Label43.Text = Format(Val(Label43.Text), "0")
         Label86.Text = Format(Val(Label86.Text), "0")
         Label45.Text = Format(Val(Label45.Text), "0")
@@ -675,7 +675,7 @@ Public Class Form1
 
         End Try
         'End If
-
+        txtCardNo.Focus()
     End Sub
 
     Private Sub Tbl_Pro_ArticleBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles Tbl_Pro_ArticleBindingSource.PositionChanged
