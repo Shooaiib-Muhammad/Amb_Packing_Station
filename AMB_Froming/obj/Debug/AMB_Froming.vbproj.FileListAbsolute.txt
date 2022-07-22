@@ -130,3 +130,53 @@ C:\Users\its-4.FORWARD\Desktop\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.app
 C:\Users\its-4.FORWARD\Desktop\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.exe
 C:\Users\its-4.FORWARD\Desktop\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.xml
 C:\Users\its-4.FORWARD\Desktop\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.pdb
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe.config
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe.manifest
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.application
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.pdb
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.xml
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.AssemblyReference.cache
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.SuggestedBindingRedirects.cache
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.AlertBox.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Form1.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.FressAlert.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.FrmNewReports.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.NewRepots.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.RepairBalance.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.RepairFail.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Reports.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Resources.resources
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.GenerateResource.cache
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.CoreCompileInputs.cache
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.exe.manifest
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.application
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.exe
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.xml
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.pdb
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe.config
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe.manifest
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.application
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.exe
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.pdb
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\bin\Debug\AMB_Froming.xml
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.AssemblyReference.cache
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.SuggestedBindingRedirects.cache
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.AddBarCode.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.AlertBox.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Form1.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.FressAlert.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.FrmNewReports.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.NewRepots.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.RepairBalance.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.RepairFail.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Reports.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.Resources.resources
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.GenerateResource.cache
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.vbproj.CoreCompileInputs.cache
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.exe.manifest
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.application
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.exe
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.xml
+C:\Users\ITS-11\Desktop\Production\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.pdb
+C:\Users\its-4.FORWARD\Desktop\Github working\AMb packing\AMB_Froming\obj\Debug\AMB_Froming.AddBarCode.resources

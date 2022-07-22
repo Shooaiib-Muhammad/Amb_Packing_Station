@@ -4,7 +4,7 @@
     <PublishUrlHistory>\\dnsserver\IT Shared\ERPFS\Scanner\AMB_packing\|\\dnsserver\IT Shared\ERPFS\Scanner\AMB packing\|\\dnsserver\IT Shared\ERPFS\AMBPrd\packing\|\\server\IT Shared\ERPFS\Scanner\AMB_packing\|\\server\IT Shared\ERPFS\AMBPrd\packing\</PublishUrlHistory>
     <InstallUrlHistory>\\server\IT Shared\ERPFS\AMBPrd\|\\server\IT Shared\ERPFS\\|\\server\IT Shared\ERPFS\TMPrd\|\\server\IT Shared\ERPFS\\\server\IT Shared\ERPFS\TMPrd\\</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory>\\dnsserver\IT Shared\ERPFS\AMBPrd\packing\|\\dnsserver\IT Shared\ERPFS\Scanner\AMB_packing\|\\server\IT Shared\ERPFS\Scanner\AMB_packing\|\\server\IT Shared\ERPFS\AMBPrd\packing\|\\server\IT Shared\ERPFS\AMBPrd\Forming\</UpdateUrlHistory>
+    <UpdateUrlHistory>\\dnsserver\IT Shared\ERPFS\Scanner\AMB_packing\|\\dnsserver\IT Shared\ERPFS\AMBPrd\packing\|\\server\IT Shared\ERPFS\Scanner\AMB_packing\|\\server\IT Shared\ERPFS\AMBPrd\packing\|\\server\IT Shared\ERPFS\AMBPrd\Forming\</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

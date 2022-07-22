@@ -137,7 +137,7 @@ Public Class Form1
         values()
         reset()
 
-
+        txtCardNo.Focus()
 
     End Sub
 
@@ -209,6 +209,7 @@ Public Class Form1
     End Sub
 
     Private Sub reset()
+        txtCardNo.Focus()
         Button27.BackColor = Color.White
         Button22.BackColor = Color.White
         Button23.BackColor = Color.White
@@ -313,77 +314,83 @@ Public Class Form1
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        unevensurface = 1
         clickDefect(unevensurface, Button2)
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        unshapecut = 1
         clickDefect(unshapecut, Button3)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        colourshade = 1
         clickDefect(colourshade, Button4)
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
+        anymisprint = 1
         clickDefect(anymisprint, Button5)
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-
+        printmissallignment = 1
         clickDefect(printmissallignment, Button6)
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-
+        Wrinkle = 1
         clickDefect(Wrinkle, Button11)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-
+        excessglue = 1
         clickDefect(excessglue, Button10)
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        cutingpanel = 1
         clickDefect(cutingpanel, Button9)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        materialdefects = 1
         clickDefect(materialdefects, Button7)
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        zigzagcut = 1
         clickDefect(zigzagcut, Button16)
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-
+        seamoverlapping = 1
         clickDefect(seamoverlapping, Button15)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        PuC = 1
         clickDefect(PuC, Button14)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-
+        heavyprintdefects = 1
         clickDefect(heavyprintdefects, Button13)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-
+        Otherissue = 1
         clickDefect(Otherissue, Button12)
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-
+        pressuremark = 1
         clickDefect(pressuremark, Button17)
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
-
+        wrongartwork = 1
         clickDefect(wrongartwork, Button20)
     End Sub
 
@@ -470,46 +477,50 @@ Public Class Form1
 
 
     Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+        Discolor = 1
         clickDefect(Discolor, Button26)
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
-
+        openseam = 1
         clickDefect(openseam, Button25)
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
-
+        LogoDoubling = 1
         clickDefect(LogoDoubling, Button24)
     End Sub
 
     Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+        airbubble = 1
         clickDefect(airbubble, Button23)
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
-
+        LargerSpots = 1
         clickDefect(LargerSpots, Button22)
     End Sub
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+        Smearing = 1
         clickDefect(Smearing, Button27)
 
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
-
+        newtouching = 1
         clickDefect(newtouching, Button29)
 
     End Sub
 
     Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
-
+        seamClosingGlue = 1
         clickDefect(seamClosingGlue, Button30)
 
     End Sub
 
     Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        missingglue = 1
         clickDefect(missingglue, Button28)
     End Sub
 
@@ -648,10 +659,12 @@ Public Class Form1
      missingglue,
      pressuremark,
      airbubble)
+        txtCardNo.Focus()
         'CallRepair()
     End Sub
 
     Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        BlurPrinting = 1
         clickDefect(BlurPrinting, Button31)
     End Sub
 
@@ -1101,29 +1114,29 @@ Public Class Form1
     End Sub
 
     Private Sub txtCardNo_TextChanged(sender As Object, e As EventArgs) Handles txtCardNo.TextChanged
-        Dim barCodeNo As String
+        'Dim barCodeNo As String
 
-        barCodeNo = txtCardNo.Text
-        If barCodeNo.Length > 0 Then
-            'If barCodeNo.Length = 13 Then
-
-
-            Try
+        'barCodeNo = txtCardNo.Text
+        'If barCodeNo.Length > 0 Then
+        '    'If barCodeNo.Length = 13 Then
 
 
+        '    Try
 
 
-                Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
-                Entry(barCodeNo)
 
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            Finally
-                'txtCardNo.Text = ""
-            End Try
-        End If
 
+        '        Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
+        '        Entry(barCodeNo)
+
+        '    Catch ex As Exception
+        '        MsgBox(ex.Message)
+        '    Finally
+        '        'txtCardNo.Text = ""
+        '    End Try
         'End If
+
+        ''End If
     End Sub
     Private Sub Entry(ByVal Card As String)
 
@@ -1174,6 +1187,48 @@ Public Class Form1
 
         End Try
 
+    End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        Dim box2 = New AddBarCode()
+
+        box2.ShowDialog()
+    End Sub
+
+    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
+
+    End Sub
+
+    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+
+    End Sub
+
+    Private Sub txtCardNo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCardNo.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Dim barCodeNo As String
+
+            barCodeNo = txtCardNo.Text
+
+            If barCodeNo.Length > 0 Then
+                'If barCodeNo.Length = 13 Then
+                Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
+
+
+
+
+                Try
+
+                    Entry(barCodeNo)
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                Finally
+                    'txtCardNo.Text = ""
+                End Try
+
+
+            End If
+        End If
     End Sub
     'Private Sub ClcikBtn(Button)
     '    Button.BackColor = Color.Red

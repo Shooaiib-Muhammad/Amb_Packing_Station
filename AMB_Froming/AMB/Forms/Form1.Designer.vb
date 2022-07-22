@@ -210,6 +210,7 @@ Partial Class Form1
         Me.Label37 = New System.Windows.Forms.Label()
         Me.View_Pro_Article_BarCodeTableAdapter = New AMB_Froming.DSproductionTableAdapters.View_Pro_Article_BarCodeTableAdapter()
         Me.TableAdapterManager1 = New AMB_Froming.DSproductionTableAdapters.TableAdapterManager()
+        Me.Button40 = New System.Windows.Forms.Button()
         ArtCodeLabel = New System.Windows.Forms.Label()
         ArtSizeLabel = New System.Windows.Forms.Label()
         Label34 = New System.Windows.Forms.Label()
@@ -1174,7 +1175,7 @@ Partial Class Form1
         '
         Me.coreDefects.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.coreDefects.ForeColor = System.Drawing.Color.BlueViolet
-        Me.coreDefects.Location = New System.Drawing.Point(1259, 743)
+        Me.coreDefects.Location = New System.Drawing.Point(1220, 841)
         Me.coreDefects.Name = "coreDefects"
         Me.coreDefects.Size = New System.Drawing.Size(123, 65)
         Me.coreDefects.TabIndex = 55592
@@ -2295,12 +2296,25 @@ Partial Class Form1
         Me.TableAdapterManager1.tbl_Pro_Article_BarCode_TransactionsTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = AMB_Froming.DSproductionTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Button40
+        '
+        Me.Button40.BackColor = System.Drawing.Color.Yellow
+        Me.Button40.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button40.ForeColor = System.Drawing.Color.Black
+        Me.Button40.Location = New System.Drawing.Point(1106, 721)
+        Me.Button40.Name = "Button40"
+        Me.Button40.Size = New System.Drawing.Size(187, 59)
+        Me.Button40.TabIndex = 55605
+        Me.Button40.Text = "Add Barcode"
+        Me.Button40.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1819, 1012)
+        Me.Controls.Add(Me.Button40)
         Me.Controls.Add(Label69)
         Me.Controls.Add(Me.Button39)
         Me.Controls.Add(Me.Label37)
@@ -2557,4 +2571,5 @@ Partial Class Form1
     Friend WithEvents txtCardNo As TextBox
     Friend WithEvents Panel10 As Panel
     Friend WithEvents EmpPicPictureBox As PictureBox
+    Friend WithEvents Button40 As Button
 End Class

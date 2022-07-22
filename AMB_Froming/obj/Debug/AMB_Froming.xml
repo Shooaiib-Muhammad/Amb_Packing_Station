@@ -527,6 +527,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCodeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:AMB_Froming.DSproduction.View_Pro_Article_BarCodeRow">
 <summary>
 Represents strongly named DataRow class.
@@ -538,6 +543,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:AMB_Froming.DSproduction.view_Production_PackingRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCodeRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -557,6 +567,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:AMB_Froming.DSproduction.tbl_Pro_Article_BarCodeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:AMB_Froming.DSproductionTableAdapters.View_Pro_Article_BarCodeTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -568,6 +583,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:AMB_Froming.DSproductionTableAdapters.view_Production_PackingTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AMB_Froming.DSproductionTableAdapters.tbl_Pro_Article_BarCodeTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
