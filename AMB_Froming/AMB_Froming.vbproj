@@ -11,10 +11,9 @@
     <AssemblyName>AMB_Froming</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
     <PublishUrl>\\dnsserver\IT Shared\ERPFS\Scanner\AMB_packing\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
@@ -27,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\dnsserver\IT Shared\ERPFS\Scanner\AMB_packing\</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -117,12 +116,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSproduction.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AMB\Forms\AddBarCode.Designer.vb">
-      <DependentUpon>AddBarCode.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AMB\Forms\AddBarCode.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="AMB\Forms\AlertBox.Designer.vb">
       <DependentUpon>AlertBox.vb</DependentUpon>
     </Compile>
@@ -189,9 +182,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AMB\Forms\AddBarCode.resx">
-      <DependentUpon>AddBarCode.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AMB\Forms\AlertBox.resx">
       <DependentUpon>AlertBox.vb</DependentUpon>
     </EmbeddedResource>

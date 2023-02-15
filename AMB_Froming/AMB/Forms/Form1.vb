@@ -57,12 +57,14 @@ Public Class Form1
     Dim missingglue = 0
     Dim pressuremark = 0
     Dim airbubble = 0
+    Dim CBDEFETCS = 0
+    Dim Dirty = 0
     Dim LineID As Int64
     Dim ManchineName As String = Environment.MachineName
     Private Declare Function SQLConfigDataSource Lib "ODBCCP32.DLL" (ByVal hwndParent As Integer, ByVal fRequest As Integer, ByVal lpszDriver As String, ByVal lpszAttributes As String) As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtCardNo.Focus()
+
         CreateSystemDSN()
 
         'TODO: This line of code loads data into the 'DSAMB.tbl_PC_AMB_Line' table. You can move, or remove it, as needed.
@@ -122,27 +124,34 @@ Public Class Form1
         Timer2.Interval = 1000
         Timer2.Start()
 
-        txtCardNo.Focus()
+
         values()
         DayID()
 
     End Sub
-    Private Sub Insertion(pass As Int64, seamClosingGlue As Int64, panalGmd As Int64, Overlap As Int64, ZigZag As Int64, Wrinkle As Int64, ArtWork As Int64, StraightCut As Int64, Burning As Int64, unbounded As Int64, SingleStrip As Int64, openStrip As Int64, panalCavity As Int64, CoreCavity As Int64, PuC As Int64, bgrade As Int64, Otherissue As Int64, Touching As Int64, MissAlligmnet As Int64, Fail As Int64, Discolor As Int64, LogoSMearing As Int64, LogoDoubling As Int64, barcodemisalligment As Int64, LargerSpots As Int64, Smearing As Int64, cuttingResidual As Int64, hfMisAlignment As Int64, status As Boolean, RPass As Int64, RCheck As Int64, BlurPrinting As Int64, check As Int64, BallType As String, unevenballSurface As Int64, UNSHAPECUT As Int64, zigzagedge As Int64, cutting As Int64, heavyprint As Int64, newtouhing As Int64, printmissalligment As Int64, anymisprint As Int64, colorshade As Int64, wrongartwork As Int64, materialfDefects As Int64, openseam As Int64, seamoverlaping As Int64, wrikles As Int64, excessglue As Int64, missingglue As Int64, pressuremark As Int64, airbubble As Int64)
+    Private Sub Claeartextbox()
+        'txtCardNo.Text = ""
+        txtCardNo.Focus()
+    End Sub
+    Private Sub Insertion(pass As Int64, seamClosingGlue As Int64, panalGmd As Int64, Overlap As Int64, ZigZag As Int64, Wrinkle As Int64, ArtWork As Int64, StraightCut As Int64, Burning As Int64, unbounded As Int64, SingleStrip As Int64, openStrip As Int64, panalCavity As Int64, CoreCavity As Int64, PuC As Int64, bgrade As Int64, Otherissue As Int64, Touching As Int64, MissAlligmnet As Int64, Fail As Int64, Discolor As Int64, LogoSMearing As Int64, LogoDoubling As Int64, barcodemisalligment As Int64, LargerSpots As Int64, Smearing As Int64, cuttingResidual As Int64, hfMisAlignment As Int64, status As Boolean, RPass As Int64, RCheck As Int64, BlurPrinting As Int64, check As Int64, BallType As String, unevenballSurface As Int64, UNSHAPECUT As Int64, zigzagedge As Int64, cutting As Int64, heavyprint As Int64, newtouhing As Int64, printmissalligment As Int64, anymisprint As Int64, colorshade As Int64, wrongartwork As Int64, materialfDefects As Int64, openseam As Int64, seamoverlaping As Int64, wrikles As Int64, excessglue As Int64, missingglue As Int64, pressuremark As Int64, airbubble As Int64, cbdEFETC As Int64, Dirty As Int64)
 
         Try
-            Me.Tbl_PC_AMB_Hours_TranTableAdapter.InsertQuery(0, 0, 0, ArtSizeComboBox.Text, Val(DayNoLabel1.Text), 1, LineID, 2, Val(TextBox1.Text), 0, 0, 0, Val(Label31.Text), 0, Val(Label50.Text), 0, 0, 0, 0, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), seamClosingGlue, PuC, CoreCavity, Touching, Otherissue, panalCavity, openStrip, SingleStrip, unbounded, ArtWork, Wrinkle, ZigZag, Overlap, panalGmd, bgrade, 0, 0, check, pass, Fail, StraightCut, cuttingResidual, Burning, SingleStrip, openStrip, 0, RCheck, MissAlligmnet, Discolor, LogoSMearing, LogoDoubling, barcodemisalligment, LargerSpots, Smearing, hfMisAlignment, status, RPass, BlurPrinting, BallType, Nothing, unevenballSurface, UNSHAPECUT, zigzagedge, cutting, heavyprint, newtouhing, printmissalligment, anymisprint, colorshade, wrongartwork, materialfDefects, openseam, seamoverlaping, wrikles, excessglue, missingglue, pressuremark, airbubble, ManchineName)
+            Me.Tbl_PC_AMB_Hours_TranTableAdapter.InsertQuery(0, 0, 0, Label70.Text, Val(DayNoLabel1.Text), 1, LineID, 2, Val(TextBox1.Text), 0, 0, 0, Val(Label31.Text), 0, Val(Label50.Text), 0, 0, 0, 0, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), seamClosingGlue, PuC, CoreCavity, Touching, Otherissue, panalCavity, openStrip, SingleStrip, unbounded, ArtWork, Wrinkle, ZigZag, Overlap, panalGmd, bgrade, 0, 0, check, pass, Fail, StraightCut, cuttingResidual, Burning, SingleStrip, openStrip, 0, RCheck, MissAlligmnet, Discolor, LogoSMearing, LogoDoubling, barcodemisalligment, LargerSpots, Smearing, hfMisAlignment, status, RPass, BlurPrinting, BallType, Nothing, unevenballSurface, UNSHAPECUT, zigzagedge, cutting, heavyprint, newtouhing, printmissalligment, anymisprint, colorshade, wrongartwork, materialfDefects, openseam, seamoverlaping, wrikles, excessglue, missingglue, pressuremark, airbubble, ManchineName, cbdEFETC, Dirty)
+            Claeartextbox()
         Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
+
         Data()
         values()
         reset()
 
-        txtCardNo.Focus()
+
 
     End Sub
 
     Private Sub values()
-        txtCardNo.Focus()
+        Claeartextbox()
         Label43.Text = Format(Val(Label43.Text), "0")
         Label86.Text = Format(Val(Label86.Text), "0")
         Label45.Text = Format(Val(Label45.Text), "0")
@@ -173,14 +182,14 @@ Public Class Form1
         Label65.Text = Format(Val(Label65.Text), "0")
         Label66.Text = Format(Val(Label66.Text), "0")
         Label67.Text = Format(Val(Label67.Text), "0")
-
+        Label74.Text = Format(Val(Label67.Text), "0")
         Label68.Text = Format(Val(Label68.Text), "0")
 
         Label33.Text = Val(Label10.Text) + Val(Label23.Text) + Val(Label16.Text)
         Label33.Text = Format(Val(Label33.Text), "0")
         Label29.Text = Val(Label20.Text) + Val(Label66.Text) + Val(Label13.Text) + Val(Label11.Text) + Val(Label12.Text)
         Label29.Text = Format(Val(Label29.Text), "0")
-        Label30.Text = Val(Label49.Text) + Val(Label14.Text) + Val(Label60.Text) + Val(Label22.Text) + Val(Label18.Text) + Val(Label17.Text) + Val(Label65.Text) + Val(Label24.Text) + Val(Label58.Text)
+        Label30.Text = Val(Label49.Text) + Val(Label14.Text) + Val(Label60.Text) + Val(Label22.Text) + Val(Label18.Text) + Val(Label17.Text) + Val(Label65.Text) + Val(Label24.Text) + Val(Label58.Text) + Val(Label74.Text)
         Label30.Text = Format(Val(Label30.Text), "0")
         Dim ArtFail = Val(Label86.Text) - Val(Label45.Text)
         Label43.Text = ArtFail
@@ -209,7 +218,7 @@ Public Class Form1
     End Sub
 
     Private Sub reset()
-        txtCardNo.Focus()
+        Claeartextbox()
         Button27.BackColor = Color.White
         Button22.BackColor = Color.White
         Button23.BackColor = Color.White
@@ -248,7 +257,8 @@ Public Class Form1
         Button37.BackColor = Color.White
         Button38.BackColor = Color.White
         Button39.BackColor = Color.White
-
+        Button40.BackColor = Color.White
+        Button41.BackColor = Color.White
         PuC = 0
         CoreCavity = 0
         Touching = 0
@@ -294,6 +304,8 @@ Public Class Form1
         missingglue = 0
         pressuremark = 0
         airbubble = 0
+        CBDEFETCS = 0
+        Dirty = 0
     End Sub
 
     Private Sub Tbl_Pro_Article_DBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles Tbl_Pro_Article_DBindingSource.PositionChanged
@@ -304,7 +316,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Insertion(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, True, 0, 0, 0, 1, Nothing, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        Insertion(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, True, 0, 0, 0, 1, Nothing, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
         reset()
         Button1.BackColor = Color.Green
         Entryflag = True
@@ -315,83 +327,83 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         unevensurface = 1
-        clickDefect(unevensurface, Button2)
+        clickDefect(Button2)
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         unshapecut = 1
-        clickDefect(unshapecut, Button3)
+        clickDefect(Button3)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         colourshade = 1
-        clickDefect(colourshade, Button4)
+        clickDefect(Button4)
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         anymisprint = 1
-        clickDefect(anymisprint, Button5)
+        clickDefect(Button5)
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         printmissallignment = 1
-        clickDefect(printmissallignment, Button6)
+        clickDefect(Button6)
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Wrinkle = 1
-        clickDefect(Wrinkle, Button11)
+        clickDefect(Button11)
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         excessglue = 1
-        clickDefect(excessglue, Button10)
+        clickDefect(Button10)
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         cutingpanel = 1
-        clickDefect(cutingpanel, Button9)
+        clickDefect(Button9)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         materialdefects = 1
-        clickDefect(materialdefects, Button7)
+        clickDefect(Button7)
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         zigzagcut = 1
-        clickDefect(zigzagcut, Button16)
+        clickDefect(Button16)
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         seamoverlapping = 1
-        clickDefect(seamoverlapping, Button15)
+        clickDefect(Button15)
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
         PuC = 1
-        clickDefect(PuC, Button14)
+        clickDefect(Button14)
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
         heavyprintdefects = 1
-        clickDefect(heavyprintdefects, Button13)
+        clickDefect(Button13)
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         Otherissue = 1
-        clickDefect(Otherissue, Button12)
+        clickDefect(Button12)
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
         pressuremark = 1
-        clickDefect(pressuremark, Button17)
+        clickDefect(Button17)
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
         wrongartwork = 1
-        clickDefect(wrongartwork, Button20)
+        clickDefect(Button20)
     End Sub
 
     Dim TimerFlag As Boolean = False
@@ -443,7 +455,7 @@ Public Class Form1
         values()
     End Sub
 
-    Private Sub ArtCodeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ArtCodeComboBox.SelectedIndexChanged
+    Private Sub ArtCodeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
         Data()
         values()
 
@@ -478,50 +490,50 @@ Public Class Form1
 
     Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
         Discolor = 1
-        clickDefect(Discolor, Button26)
+        clickDefect(Button26)
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
         openseam = 1
-        clickDefect(openseam, Button25)
+        clickDefect(Button25)
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
         LogoDoubling = 1
-        clickDefect(LogoDoubling, Button24)
+        clickDefect(Button24)
     End Sub
 
     Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
-        airbubble = 1
-        clickDefect(airbubble, Button23)
+        airbubble=1
+        clickDefect(Button23)
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
         LargerSpots = 1
-        clickDefect(LargerSpots, Button22)
+        clickDefect(Button22)
     End Sub
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
         Smearing = 1
-        clickDefect(Smearing, Button27)
+        clickDefect(Button27)
 
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
         newtouching = 1
-        clickDefect(newtouching, Button29)
+        clickDefect(Button29)
 
     End Sub
 
     Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
         seamClosingGlue = 1
-        clickDefect(seamClosingGlue, Button30)
+        clickDefect(Button30)
 
     End Sub
 
     Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
         missingglue = 1
-        clickDefect(missingglue, Button28)
+        clickDefect(Button28)
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
@@ -592,80 +604,68 @@ Public Class Form1
         values()
     End Sub
 
-    Private Sub clickDefect(ByRef value, button)
+    Private Sub clickDefect(button)
+        Dim barCodeNo As String
+        CType(button, Button).BackColor = Color.DarkRed
+        'callbarcode()
+        'barCodeNo = txtCardNo.Text
 
-        Dim rpass
-        Dim rcheck
-        Dim status
-        Dim fail
-        Dim check
-
-        'If RadioButton1.Checked = True Then
-        '    BallType = "FreshBall"
-
-        value = 1
-            rpass = 0
-            rcheck = 0
-            status = True
-            fail = 1
-            check = 1
+        'If barCodeNo.Length > 0 Then
+        'If barCodeNo.Length = 13 Then
+        'Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
+        'If RadioButton10.Checked = True Then
+        Dim Value
+                Dim rpass
+                Dim rcheck
+                Dim status
+                Dim fail
+                Dim check
 
 
-        'ElseIf RadioButton2.Checked = True Then
-        '    BallType = "RepairPass"
+                Value = 1
+                rpass = 0
+                rcheck = 0
+                status = True
+                fail = 1
+                check = 1
 
-        '    value = -1
-        '    rpass = 1
-        '    rcheck = 1
-        '    status = False
-        '    fail = -1
-        '    check = 0
-
-        'ElseIf RadioButton3.Checked = True Then
-        '    BallType = "RepairFail"
-
-        '    value = 1
-        '    rpass = 0
-        '    rcheck = 1
-        '    status = False
-        '    fail = 1
-        '    check = 0
-
-        'End If
-        button.BackColor = Color.Red
-        TimerFlag = True
-        CallTimer()
+                button.BackColor = Color.Red
+                TimerFlag = True
+                CallTimer()
 
         Insertion(0, seamClosingGlue, panalGmd, Overlap, ZigZag, Wrinkle, ArtWork,
-                  StraightCut, Burning, unbounded, SingleStrip, openStrip, panalCavity,
-                  CoreCavity, PuC, bgrade,
-                  Otherissue, Touching, MissAlligmnet, fail, Discolor, LogoSMearing,
-                  LogoDoubling, barcodemisalligment, LargerSpots, Smearing, cuttingResidual,
-                  hfMisAlignment, status, rpass, rcheck, BlurPrinting, check, BallType,
-                  unevensurface, unshapecut,
-                  zigzagcut,
-    cutingpanel,
-     heavyprintdefects,
-     newtouching,
-     printmissallignment,
-     anymisprint,
-     colourshade,
-     wrongartwork,
-     materialdefects,
-     openseam,
-    seamoverlapping,
-     wrikles,
-     excessglue,
-     missingglue,
-     pressuremark,
-     airbubble)
-        txtCardNo.Focus()
+                          StraightCut, Burning, unbounded, SingleStrip, openStrip, panalCavity,
+                          CoreCavity, PuC, bgrade,
+                          Otherissue, Touching, MissAlligmnet, fail, Discolor, LogoSMearing,
+                          LogoDoubling, barcodemisalligment, LargerSpots, Smearing, cuttingResidual,
+                          hfMisAlignment, status, rpass, rcheck, BlurPrinting, check, BallType,
+                          unevensurface, unshapecut,
+                          zigzagcut,
+            cutingpanel,
+             heavyprintdefects,
+             newtouching,
+             printmissallignment,
+             anymisprint,
+             colourshade,
+             wrongartwork,
+             materialdefects,
+             openseam,
+            seamoverlapping,
+             wrikles,
+             excessglue,
+             missingglue,
+             pressuremark,
+             airbubble, CBDEFETCS, Dirty)
+        'End If
+        'End If
+
         'CallRepair()
+        txtCardNo.Focus()
     End Sub
 
     Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
         BlurPrinting = 1
-        clickDefect(BlurPrinting, Button31)
+        clickDefect(Button31)
     End Sub
 
     Private Sub Label68_Click(sender As Object, e As EventArgs) Handles Label68.Click
@@ -678,17 +678,16 @@ Public Class Form1
     End Sub
     Private Sub Data()
 
-        txtCardNo.Text = ""
-        txtCardNo.Focus()
+        Claeartextbox()
 
         Try
-            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), ArtCodeComboBox.SelectedValue, Val(DayNoLabel1.Text), Label37.Text)
+            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text), Label37.Text)
             Me.View_AMb_FormingTableAdapter.Fill(Me.DSAMB.View_AMb_Forming, 2, Val(DayNoLabel1.Text), Label37.Text)
         Catch ex As System.Exception
 
         End Try
         'End If
-        txtCardNo.Focus()
+
     End Sub
 
     Private Sub Tbl_Pro_ArticleBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles Tbl_Pro_ArticleBindingSource.PositionChanged
@@ -1016,7 +1015,7 @@ Public Class Form1
     End Sub
     Private Sub CallRepairFail()
         Try
-            Me.View_AMb_Article_Wise_SumTableAdapter.FillBy(Me.DSAMB.View_AMb_Article_Wise_Sum, 1, LineNameComboBox.SelectedValue, Val(ClientID.Text), Val(ModelID.Text), ArtCodeComboBox.SelectedValue, Val(DayNoLabel1.Text))
+            Me.View_AMb_Article_Wise_SumTableAdapter.FillBy(Me.DSAMB.View_AMb_Article_Wise_Sum, 1, LineNameComboBox.SelectedValue, Val(ClientID.Text), Val(ModelID.Text), Label72.Text, Val(DayNoLabel1.Text))
 
         Catch ex As Exception
 
@@ -1049,7 +1048,7 @@ Public Class Form1
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Dim box2 = New Reports()
-        box2.RepairReprts(LineNameComboBox.SelectedValue, Now.Date, Now.Date, Val(ClientID.Text), Val(ModelID.Text), ArtCodeComboBox.SelectedValue, Val(DayNoLabel1.Text))
+        box2.RepairReprts(LineNameComboBox.SelectedValue, Now.Date, Now.Date, Val(ClientID.Text), Val(ModelID.Text), Label72.Text, Val(DayNoLabel1.Text))
         box2.ShowDialog()
 
     End Sub
@@ -1114,29 +1113,44 @@ Public Class Form1
     End Sub
 
     Private Sub txtCardNo_TextChanged(sender As Object, e As EventArgs) Handles txtCardNo.TextChanged
-        'Dim barCodeNo As String
 
-        'barCodeNo = txtCardNo.Text
-        'If barCodeNo.Length > 0 Then
-        '    'If barCodeNo.Length = 13 Then
+        Dim barCodeNo As String
+
+        barCodeNo = txtCardNo.Text
+
+        'If barCodeNo.Length = 0 Then
+        If barCodeNo.Length > 0 Then
+
+            If barCodeNo.Length = 13 Then
+                If RadioButton11.Checked = True Then
+                    Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
 
 
-        '    Try
+                    Entry(barCodeNo)
+                    txtCardNo.Text = ""
+                    txtCardNo.Focus()
+                ElseIf RadioButton10.Checked = True Then
+                    If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
+                        txtCardNo.Text = ""
+                    Else
+                        MsgBox("Article is not register")
+
+                    End If
+                End If
 
 
 
 
-        '        Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
-        '        Entry(barCodeNo)
 
-        '    Catch ex As Exception
-        '        MsgBox(ex.Message)
-        '    Finally
-        '        'txtCardNo.Text = ""
-        '    End Try
+
+            End If
+
+
+
+
+        End If
+
         'End If
-
-        ''End If
     End Sub
     Private Sub Entry(ByVal Card As String)
 
@@ -1145,7 +1159,7 @@ Public Class Form1
 
         EmpCardVerify = VerifyEmp(Card)
 
-        If EmpCardVerify = 1 Then
+        If EmpCardVerify > 0 Then
             Attendence()
             'Attendence(Label4.Text, Label5.Text, Label9.Text, Label11.Text, Label8.Text, Now.Date)
 
@@ -1177,7 +1191,7 @@ Public Class Form1
 
 
         Try
-            Insertion(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, True, 0, 0, 0, 1, Nothing, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+            Insertion(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, True, 0, 0, 0, 1, Nothing, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
             reset()
             Button1.BackColor = Color.Green
             Entryflag = True
@@ -1190,46 +1204,25 @@ Public Class Form1
     End Sub
 
     Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
-        Dim box2 = New AddBarCode()
 
-        box2.ShowDialog()
+        CBDEFETCS = 1
+        clickDefect(Button40)
     End Sub
 
-    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
-
+    Private Sub RadioButton11_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton11.CheckedChanged
+        txtCardNo.Focus()
     End Sub
 
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
-
+    Private Sub RadioButton10_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton10.CheckedChanged
+        txtCardNo.Focus()
     End Sub
 
-    Private Sub txtCardNo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCardNo.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            Dim barCodeNo As String
-
-            barCodeNo = txtCardNo.Text
-
-            If barCodeNo.Length > 0 Then
-                'If barCodeNo.Length = 13 Then
-                Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
-
-
-
-
-                Try
-
-                    Entry(barCodeNo)
-
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                Finally
-                    'txtCardNo.Text = ""
-                End Try
-
-
-            End If
-        End If
+    Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
+        Dirty = 1
+        clickDefect(Button41)
     End Sub
+
+
     'Private Sub ClcikBtn(Button)
     '    Button.BackColor = Color.Red
     'End Sub

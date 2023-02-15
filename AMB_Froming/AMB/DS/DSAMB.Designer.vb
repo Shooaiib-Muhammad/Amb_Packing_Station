@@ -2212,6 +2212,8 @@ Partial Public Class DSAMB
         
         Private columnairbubble As Global.System.Data.DataColumn
         
+        Private columnDirty As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -2776,6 +2778,14 @@ Partial Public Class DSAMB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DirtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDirty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2877,9 +2887,10 @@ Partial Public Class DSAMB
                     ByVal excussglue As Decimal,  _
                     ByVal missingglue As Decimal,  _
                     ByVal pressoremark As Decimal,  _
-                    ByVal airbubble As Decimal) As tbl_PC_AMB_Hours_TranRow
+                    ByVal airbubble As Decimal,  _
+                    ByVal Dirty As Decimal) As tbl_PC_AMB_Hours_TranRow
             Dim rowtbl_PC_AMB_Hours_TranRow As tbl_PC_AMB_Hours_TranRow = CType(Me.NewRow,tbl_PC_AMB_Hours_TranRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, PO, POM, POD, ArtSize, DayID, HourID, LineID, ProcessID, Strength, Present, PackingStrength, PackingPresent, ArtTarget, ArtPackingTarget, ArtSAM, ArtPackingSAM, Input, OutPut, Rejection, ClientID, ModelID, ArtID, SeamClosingGlue, PUC, CoreCavity, Touching, OtherPrintingIssue, PanelCavity, OpenSeam, SingleOpenStrip, UnbondedPanels, ArtWork, Wrinkle, ZigZagSeam, OverLap, PanelDMG, BGrade, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, BlurPrinting, BallType, unevenBallSurface, unshapecut, zigzagedge, cuttingpanel, heavyprintdefects, NewTouching, printmissallignament, anymisprint, colourShape, wrongartwork, materialdefects, newopenSeam, seamoverlapping, wrinkles, excussglue, missingglue, pressoremark, airbubble}
+            Dim columnValuesArray() As Object = New Object() {Nothing, PO, POM, POD, ArtSize, DayID, HourID, LineID, ProcessID, Strength, Present, PackingStrength, PackingPresent, ArtTarget, ArtPackingTarget, ArtSAM, ArtPackingSAM, Input, OutPut, Rejection, ClientID, ModelID, ArtID, SeamClosingGlue, PUC, CoreCavity, Touching, OtherPrintingIssue, PanelCavity, OpenSeam, SingleOpenStrip, UnbondedPanels, ArtWork, Wrinkle, ZigZagSeam, OverLap, PanelDMG, BGrade, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, BlurPrinting, BallType, unevenBallSurface, unshapecut, zigzagedge, cuttingpanel, heavyprintdefects, NewTouching, printmissallignament, anymisprint, colourShape, wrongartwork, materialdefects, newopenSeam, seamoverlapping, wrinkles, excussglue, missingglue, pressoremark, airbubble, Dirty}
             rowtbl_PC_AMB_Hours_TranRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_PC_AMB_Hours_TranRow)
             Return rowtbl_PC_AMB_Hours_TranRow
@@ -2974,6 +2985,7 @@ Partial Public Class DSAMB
             Me.columnmissingglue = MyBase.Columns("missingglue")
             Me.columnpressoremark = MyBase.Columns("pressoremark")
             Me.columnairbubble = MyBase.Columns("airbubble")
+            Me.columnDirty = MyBase.Columns("Dirty")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3111,6 +3123,8 @@ Partial Public Class DSAMB
             MyBase.Columns.Add(Me.columnpressoremark)
             Me.columnairbubble = New Global.System.Data.DataColumn("airbubble", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnairbubble)
+            Me.columnDirty = New Global.System.Data.DataColumn("Dirty", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDirty)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTranID}, true))
             Me.columnTranID.AutoIncrement = true
             Me.columnTranID.AutoIncrementSeed = -1
@@ -5999,6 +6013,10 @@ Partial Public Class DSAMB
         
         Private columnwrongartwork As Global.System.Data.DataColumn
         
+        Private columnCBDefect As Global.System.Data.DataColumn
+        
+        Private columnDirty As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -6459,6 +6477,22 @@ Partial Public Class DSAMB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property CBDefectColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCBDefect
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DirtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDirty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6548,9 +6582,11 @@ Partial Public Class DSAMB
                     ByVal zigzagedge As Decimal,  _
                     ByVal unshapecut As Decimal,  _
                     ByVal unevenBallSurface As Decimal,  _
-                    ByVal wrongartwork As Decimal) As View_AMb_Article_Wise_SumRow
+                    ByVal wrongartwork As Decimal,  _
+                    ByVal CBDefect As Decimal,  _
+                    ByVal Dirty As Decimal) As View_AMb_Article_Wise_SumRow
             Dim rowView_AMb_Article_Wise_SumRow As View_AMb_Article_Wise_SumRow = CType(Me.NewRow,View_AMb_Article_Wise_SumRow)
-            Dim columnValuesArray() As Object = New Object() {PanelDMG, OverLap, ZigZagSeam, Wrinkle, ArtWork, UnbondedPanels, SingleOpenStrip, OpenSeam, PanelCavity, Touching, OtherPrintingIssue, CoreCavity, PUC, SeamClosingGlue, BGrade, TotalChecked, Pass, Fail, StraightCut, CuttingResidual, ConnectionBreak, UncureGlue, ExcessiveGlue, OverUnderWght, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, RCheck, RPass, BlurPrinting, airbubble, pressoremark, missingglue, excussglue, wrinkles, seamoverlapping, newopenSeam, materialdefects, colourShape, anymisprint, printmissallignament, NewTouching, heavyprintdefects, cuttingpanel, zigzagedge, unshapecut, unevenBallSurface, wrongartwork}
+            Dim columnValuesArray() As Object = New Object() {PanelDMG, OverLap, ZigZagSeam, Wrinkle, ArtWork, UnbondedPanels, SingleOpenStrip, OpenSeam, PanelCavity, Touching, OtherPrintingIssue, CoreCavity, PUC, SeamClosingGlue, BGrade, TotalChecked, Pass, Fail, StraightCut, CuttingResidual, ConnectionBreak, UncureGlue, ExcessiveGlue, OverUnderWght, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, RCheck, RPass, BlurPrinting, airbubble, pressoremark, missingglue, excussglue, wrinkles, seamoverlapping, newopenSeam, materialdefects, colourShape, anymisprint, printmissallignament, NewTouching, heavyprintdefects, cuttingpanel, zigzagedge, unshapecut, unevenBallSurface, wrongartwork, CBDefect, Dirty}
             rowView_AMb_Article_Wise_SumRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowView_AMb_Article_Wise_SumRow)
             Return rowView_AMb_Article_Wise_SumRow
@@ -6626,6 +6662,8 @@ Partial Public Class DSAMB
             Me.columnunshapecut = MyBase.Columns("unshapecut")
             Me.columnunevenBallSurface = MyBase.Columns("unevenBallSurface")
             Me.columnwrongartwork = MyBase.Columns("wrongartwork")
+            Me.columnCBDefect = MyBase.Columns("CBDefect")
+            Me.columnDirty = MyBase.Columns("Dirty")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6737,6 +6775,10 @@ Partial Public Class DSAMB
             MyBase.Columns.Add(Me.columnunevenBallSurface)
             Me.columnwrongartwork = New Global.System.Data.DataColumn("wrongartwork", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnwrongartwork)
+            Me.columnCBDefect = New Global.System.Data.DataColumn("CBDefect", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCBDefect)
+            Me.columnDirty = New Global.System.Data.DataColumn("Dirty", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDirty)
             Me.columnMissAlligment.ReadOnly = true
             Me.columnDisColor.ReadOnly = true
             Me.columnLogoSmearing.ReadOnly = true
@@ -6766,6 +6808,8 @@ Partial Public Class DSAMB
             Me.columnunshapecut.ReadOnly = true
             Me.columnunevenBallSurface.ReadOnly = true
             Me.columnwrongartwork.ReadOnly = true
+            Me.columnCBDefect.ReadOnly = true
+            Me.columnDirty.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -16156,6 +16200,21 @@ Partial Public Class DSAMB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Dirty() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_PC_AMB_Hours_Tran.DirtyColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dirty' in table 'tbl_PC_AMB_Hours_Tran' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_PC_AMB_Hours_Tran.DirtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPONull() As Boolean
             Return Me.IsNull(Me.tabletbl_PC_AMB_Hours_Tran.POColumn)
         End Function
@@ -16848,6 +16907,18 @@ Partial Public Class DSAMB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetairbubbleNull()
             Me(Me.tabletbl_PC_AMB_Hours_Tran.airbubbleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsDirtyNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_PC_AMB_Hours_Tran.DirtyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetDirtyNull()
+            Me(Me.tabletbl_PC_AMB_Hours_Tran.DirtyColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -20624,6 +20695,36 @@ Partial Public Class DSAMB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property CBDefect() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableView_AMb_Article_Wise_Sum.CBDefectColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CBDefect' in table 'View_AMb_Article Wise_Sum' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableView_AMb_Article_Wise_Sum.CBDefectColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Dirty() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableView_AMb_Article_Wise_Sum.DirtyColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dirty' in table 'View_AMb_Article Wise_Sum' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableView_AMb_Article_Wise_Sum.DirtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPanelDMGNull() As Boolean
             Return Me.IsNull(Me.tableView_AMb_Article_Wise_Sum.PanelDMGColumn)
         End Function
@@ -21256,6 +21357,30 @@ Partial Public Class DSAMB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetwrongartworkNull()
             Me(Me.tableView_AMb_Article_Wise_Sum.wrongartworkColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsCBDefectNull() As Boolean
+            Return Me.IsNull(Me.tableView_AMb_Article_Wise_Sum.CBDefectColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetCBDefectNull()
+            Me(Me.tableView_AMb_Article_Wise_Sum.CBDefectColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsDirtyNull() As Boolean
+            Return Me.IsNull(Me.tableView_AMb_Article_Wise_Sum.DirtyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetDirtyNull()
+            Me(Me.tableView_AMb_Article_Wise_Sum.DirtyColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -31874,6 +31999,7 @@ Namespace DSAMBTableAdapters
             tableMapping.ColumnMappings.Add("missingglue", "missingglue")
             tableMapping.ColumnMappings.Add("pressoremark", "pressoremark")
             tableMapping.ColumnMappings.Add("airbubble", "airbubble")
+            tableMapping.ColumnMappings.Add("Dirty", "Dirty")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -31924,7 +32050,7 @@ Namespace DSAMBTableAdapters
                 "nkles] = ?)) AND ((? = 1 AND [excussglue] IS NULL) OR ([excussglue] = ?)) AND (("& _ 
                 "? = 1 AND [missingglue] IS NULL) OR ([missingglue] = ?)) AND ((? = 1 AND [presso"& _ 
                 "remark] IS NULL) OR ([pressoremark] = ?)) AND ((? = 1 AND [airbubble] IS NULL) O"& _ 
-                "R ([airbubble] = ?)))"
+                "R ([airbubble] = ?)) AND ((? = 1 AND [Dirty] IS NULL) OR ([Dirty] = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TranID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TranID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -32050,6 +32176,8 @@ Namespace DSAMBTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_pressoremark", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "pressoremark", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_airbubble", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "airbubble", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_airbubble", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "airbubble", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Dirty", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dirty", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_Dirty", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "Dirty", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_PC_AMB_Hours_Tran] ([PO], [POM], [POD], [ArtSize], [DayID], [Hou"& _ 
@@ -32063,10 +32191,10 @@ Namespace DSAMBTableAdapters
                 " [BallType], [unevenBallSurface], [unshapecut], [zigzagedge], [cuttingpanel], [h"& _ 
                 "eavyprintdefects], [NewTouching], [printmissallignament], [anymisprint], [colour"& _ 
                 "Shape], [wrongartwork], [materialdefects], [newopenSeam], [seamoverlapping], [wr"& _ 
-                "inkles], [excussglue], [missingglue], [pressoremark], [airbubble]) VALUES (?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                "inkles], [excussglue], [missingglue], [pressoremark], [airbubble], [Dirty]) VALU"& _ 
+                "ES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
                 ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -32133,6 +32261,7 @@ Namespace DSAMBTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("missingglue", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "missingglue", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("pressoremark", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "pressoremark", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("airbubble", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "airbubble", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Dirty", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "Dirty", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_PC_AMB_Hours_Tran] SET [PO] = ?, [POM] = ?, [POD] = ?, [ArtSize] = ?,"& _ 
@@ -32150,53 +32279,54 @@ Namespace DSAMBTableAdapters
                 " ?, [printmissallignament] = ?, [anymisprint] = ?, [colourShape] = ?, [wrongartw"& _ 
                 "ork] = ?, [materialdefects] = ?, [newopenSeam] = ?, [seamoverlapping] = ?, [wrin"& _ 
                 "kles] = ?, [excussglue] = ?, [missingglue] = ?, [pressoremark] = ?, [airbubble] "& _ 
-                "= ? WHERE (([TranID] = ?) AND ((? = 1 AND [PO] IS NULL) OR ([PO] = ?)) AND ((? ="& _ 
-                " 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] IS NULL) OR ([POD] ="& _ 
-                " ?)) AND ([ArtSize] = ?) AND ([DayID] = ?) AND ((? = 1 AND [HourID] IS NULL) OR "& _ 
-                "([HourID] = ?)) AND ([LineID] = ?) AND ([ProcessID] = ?) AND ((? = 1 AND [Streng"& _ 
-                "th] IS NULL) OR ([Strength] = ?)) AND ((? = 1 AND [Present] IS NULL) OR ([Presen"& _ 
-                "t] = ?)) AND ((? = 1 AND [PackingStrength] IS NULL) OR ([PackingStrength] = ?)) "& _ 
-                "AND ((? = 1 AND [PackingPresent] IS NULL) OR ([PackingPresent] = ?)) AND ((? = 1"& _ 
-                " AND [ArtTarget] IS NULL) OR ([ArtTarget] = ?)) AND ((? = 1 AND [ArtPackingTarge"& _ 
-                "t] IS NULL) OR ([ArtPackingTarget] = ?)) AND ((? = 1 AND [ArtSAM] IS NULL) OR (["& _ 
-                "ArtSAM] = ?)) AND ((? = 1 AND [ArtPackingSAM] IS NULL) OR ([ArtPackingSAM] = ?))"& _ 
-                " AND ((? = 1 AND [Input] IS NULL) OR ([Input] = ?)) AND ((? = 1 AND [OutPut] IS "& _ 
-                "NULL) OR ([OutPut] = ?)) AND ((? = 1 AND [Rejection] IS NULL) OR ([Rejection] = "& _ 
-                "?)) AND ([ClientID] = ?) AND ([ModelID] = ?) AND ([ArtID] = ?) AND ((? = 1 AND ["& _ 
-                "SeamClosingGlue] IS NULL) OR ([SeamClosingGlue] = ?)) AND ((? = 1 AND [PUC] IS N"& _ 
-                "ULL) OR ([PUC] = ?)) AND ((? = 1 AND [CoreCavity] IS NULL) OR ([CoreCavity] = ?)"& _ 
-                ") AND ((? = 1 AND [Touching] IS NULL) OR ([Touching] = ?)) AND ((? = 1 AND [Othe"& _ 
-                "rPrintingIssue] IS NULL) OR ([OtherPrintingIssue] = ?)) AND ((? = 1 AND [PanelCa"& _ 
-                "vity] IS NULL) OR ([PanelCavity] = ?)) AND ((? = 1 AND [OpenSeam] IS NULL) OR (["& _ 
-                "OpenSeam] = ?)) AND ((? = 1 AND [SingleOpenStrip] IS NULL) OR ([SingleOpenStrip]"& _ 
-                " = ?)) AND ((? = 1 AND [UnbondedPanels] IS NULL) OR ([UnbondedPanels] = ?)) AND "& _ 
-                "((? = 1 AND [ArtWork] IS NULL) OR ([ArtWork] = ?)) AND ((? = 1 AND [Wrinkle] IS "& _ 
-                "NULL) OR ([Wrinkle] = ?)) AND ((? = 1 AND [ZigZagSeam] IS NULL) OR ([ZigZagSeam]"& _ 
-                " = ?)) AND ((? = 1 AND [OverLap] IS NULL) OR ([OverLap] = ?)) AND ((? = 1 AND [P"& _ 
-                "anelDMG] IS NULL) OR ([PanelDMG] = ?)) AND ((? = 1 AND [BGrade] IS NULL) OR ([BG"& _ 
-                "rade] = ?)) AND ((? = 1 AND [MissAlligment] IS NULL) OR ([MissAlligment] = ?)) A"& _ 
-                "ND ((? = 1 AND [DisColor] IS NULL) OR ([DisColor] = ?)) AND ((? = 1 AND [LogoSme"& _ 
-                "aring] IS NULL) OR ([LogoSmearing] = ?)) AND ((? = 1 AND [LogoDoubling] IS NULL)"& _ 
-                " OR ([LogoDoubling] = ?)) AND ((? = 1 AND [BarcodeMissing] IS NULL) OR ([Barcode"& _ 
-                "Missing] = ?)) AND ((? = 1 AND [LargerSpots] IS NULL) OR ([LargerSpots] = ?)) AN"& _ 
-                "D ((? = 1 AND [Smearing] IS NULL) OR ([Smearing] = ?)) AND ((? = 1 AND [HFMissAl"& _ 
-                "ignment] IS NULL) OR ([HFMissAlignment] = ?)) AND ((? = 1 AND [BlurPrinting] IS "& _ 
-                "NULL) OR ([BlurPrinting] = ?)) AND ((? = 1 AND [BallType] IS NULL) OR ([BallType"& _ 
-                "] = ?)) AND ((? = 1 AND [unevenBallSurface] IS NULL) OR ([unevenBallSurface] = ?"& _ 
-                ")) AND ((? = 1 AND [unshapecut] IS NULL) OR ([unshapecut] = ?)) AND ((? = 1 AND "& _ 
-                "[zigzagedge] IS NULL) OR ([zigzagedge] = ?)) AND ((? = 1 AND [cuttingpanel] IS N"& _ 
-                "ULL) OR ([cuttingpanel] = ?)) AND ((? = 1 AND [heavyprintdefects] IS NULL) OR (["& _ 
-                "heavyprintdefects] = ?)) AND ((? = 1 AND [NewTouching] IS NULL) OR ([NewTouching"& _ 
-                "] = ?)) AND ((? = 1 AND [printmissallignament] IS NULL) OR ([printmissallignamen"& _ 
-                "t] = ?)) AND ((? = 1 AND [anymisprint] IS NULL) OR ([anymisprint] = ?)) AND ((? "& _ 
-                "= 1 AND [colourShape] IS NULL) OR ([colourShape] = ?)) AND ((? = 1 AND [wrongart"& _ 
-                "work] IS NULL) OR ([wrongartwork] = ?)) AND ((? = 1 AND [materialdefects] IS NUL"& _ 
-                "L) OR ([materialdefects] = ?)) AND ((? = 1 AND [newopenSeam] IS NULL) OR ([newop"& _ 
-                "enSeam] = ?)) AND ((? = 1 AND [seamoverlapping] IS NULL) OR ([seamoverlapping] ="& _ 
-                " ?)) AND ((? = 1 AND [wrinkles] IS NULL) OR ([wrinkles] = ?)) AND ((? = 1 AND [e"& _ 
-                "xcussglue] IS NULL) OR ([excussglue] = ?)) AND ((? = 1 AND [missingglue] IS NULL"& _ 
-                ") OR ([missingglue] = ?)) AND ((? = 1 AND [pressoremark] IS NULL) OR ([pressorem"& _ 
-                "ark] = ?)) AND ((? = 1 AND [airbubble] IS NULL) OR ([airbubble] = ?)))"
+                "= ?, [Dirty] = ? WHERE (([TranID] = ?) AND ((? = 1 AND [PO] IS NULL) OR ([PO] = "& _ 
+                "?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] IS NULL"& _ 
+                ") OR ([POD] = ?)) AND ([ArtSize] = ?) AND ([DayID] = ?) AND ((? = 1 AND [HourID]"& _ 
+                " IS NULL) OR ([HourID] = ?)) AND ([LineID] = ?) AND ([ProcessID] = ?) AND ((? = "& _ 
+                "1 AND [Strength] IS NULL) OR ([Strength] = ?)) AND ((? = 1 AND [Present] IS NULL"& _ 
+                ") OR ([Present] = ?)) AND ((? = 1 AND [PackingStrength] IS NULL) OR ([PackingStr"& _ 
+                "ength] = ?)) AND ((? = 1 AND [PackingPresent] IS NULL) OR ([PackingPresent] = ?)"& _ 
+                ") AND ((? = 1 AND [ArtTarget] IS NULL) OR ([ArtTarget] = ?)) AND ((? = 1 AND [Ar"& _ 
+                "tPackingTarget] IS NULL) OR ([ArtPackingTarget] = ?)) AND ((? = 1 AND [ArtSAM] I"& _ 
+                "S NULL) OR ([ArtSAM] = ?)) AND ((? = 1 AND [ArtPackingSAM] IS NULL) OR ([ArtPack"& _ 
+                "ingSAM] = ?)) AND ((? = 1 AND [Input] IS NULL) OR ([Input] = ?)) AND ((? = 1 AND"& _ 
+                " [OutPut] IS NULL) OR ([OutPut] = ?)) AND ((? = 1 AND [Rejection] IS NULL) OR (["& _ 
+                "Rejection] = ?)) AND ([ClientID] = ?) AND ([ModelID] = ?) AND ([ArtID] = ?) AND "& _ 
+                "((? = 1 AND [SeamClosingGlue] IS NULL) OR ([SeamClosingGlue] = ?)) AND ((? = 1 A"& _ 
+                "ND [PUC] IS NULL) OR ([PUC] = ?)) AND ((? = 1 AND [CoreCavity] IS NULL) OR ([Cor"& _ 
+                "eCavity] = ?)) AND ((? = 1 AND [Touching] IS NULL) OR ([Touching] = ?)) AND ((? "& _ 
+                "= 1 AND [OtherPrintingIssue] IS NULL) OR ([OtherPrintingIssue] = ?)) AND ((? = 1"& _ 
+                " AND [PanelCavity] IS NULL) OR ([PanelCavity] = ?)) AND ((? = 1 AND [OpenSeam] I"& _ 
+                "S NULL) OR ([OpenSeam] = ?)) AND ((? = 1 AND [SingleOpenStrip] IS NULL) OR ([Sin"& _ 
+                "gleOpenStrip] = ?)) AND ((? = 1 AND [UnbondedPanels] IS NULL) OR ([UnbondedPanel"& _ 
+                "s] = ?)) AND ((? = 1 AND [ArtWork] IS NULL) OR ([ArtWork] = ?)) AND ((? = 1 AND "& _ 
+                "[Wrinkle] IS NULL) OR ([Wrinkle] = ?)) AND ((? = 1 AND [ZigZagSeam] IS NULL) OR "& _ 
+                "([ZigZagSeam] = ?)) AND ((? = 1 AND [OverLap] IS NULL) OR ([OverLap] = ?)) AND ("& _ 
+                "(? = 1 AND [PanelDMG] IS NULL) OR ([PanelDMG] = ?)) AND ((? = 1 AND [BGrade] IS "& _ 
+                "NULL) OR ([BGrade] = ?)) AND ((? = 1 AND [MissAlligment] IS NULL) OR ([MissAllig"& _ 
+                "ment] = ?)) AND ((? = 1 AND [DisColor] IS NULL) OR ([DisColor] = ?)) AND ((? = 1"& _ 
+                " AND [LogoSmearing] IS NULL) OR ([LogoSmearing] = ?)) AND ((? = 1 AND [LogoDoubl"& _ 
+                "ing] IS NULL) OR ([LogoDoubling] = ?)) AND ((? = 1 AND [BarcodeMissing] IS NULL)"& _ 
+                " OR ([BarcodeMissing] = ?)) AND ((? = 1 AND [LargerSpots] IS NULL) OR ([LargerSp"& _ 
+                "ots] = ?)) AND ((? = 1 AND [Smearing] IS NULL) OR ([Smearing] = ?)) AND ((? = 1 "& _ 
+                "AND [HFMissAlignment] IS NULL) OR ([HFMissAlignment] = ?)) AND ((? = 1 AND [Blur"& _ 
+                "Printing] IS NULL) OR ([BlurPrinting] = ?)) AND ((? = 1 AND [BallType] IS NULL) "& _ 
+                "OR ([BallType] = ?)) AND ((? = 1 AND [unevenBallSurface] IS NULL) OR ([unevenBal"& _ 
+                "lSurface] = ?)) AND ((? = 1 AND [unshapecut] IS NULL) OR ([unshapecut] = ?)) AND"& _ 
+                " ((? = 1 AND [zigzagedge] IS NULL) OR ([zigzagedge] = ?)) AND ((? = 1 AND [cutti"& _ 
+                "ngpanel] IS NULL) OR ([cuttingpanel] = ?)) AND ((? = 1 AND [heavyprintdefects] I"& _ 
+                "S NULL) OR ([heavyprintdefects] = ?)) AND ((? = 1 AND [NewTouching] IS NULL) OR "& _ 
+                "([NewTouching] = ?)) AND ((? = 1 AND [printmissallignament] IS NULL) OR ([printm"& _ 
+                "issallignament] = ?)) AND ((? = 1 AND [anymisprint] IS NULL) OR ([anymisprint] ="& _ 
+                " ?)) AND ((? = 1 AND [colourShape] IS NULL) OR ([colourShape] = ?)) AND ((? = 1 "& _ 
+                "AND [wrongartwork] IS NULL) OR ([wrongartwork] = ?)) AND ((? = 1 AND [materialde"& _ 
+                "fects] IS NULL) OR ([materialdefects] = ?)) AND ((? = 1 AND [newopenSeam] IS NUL"& _ 
+                "L) OR ([newopenSeam] = ?)) AND ((? = 1 AND [seamoverlapping] IS NULL) OR ([seamo"& _ 
+                "verlapping] = ?)) AND ((? = 1 AND [wrinkles] IS NULL) OR ([wrinkles] = ?)) AND ("& _ 
+                "(? = 1 AND [excussglue] IS NULL) OR ([excussglue] = ?)) AND ((? = 1 AND [missing"& _ 
+                "glue] IS NULL) OR ([missingglue] = ?)) AND ((? = 1 AND [pressoremark] IS NULL) O"& _ 
+                "R ([pressoremark] = ?)) AND ((? = 1 AND [airbubble] IS NULL) OR ([airbubble] = ?"& _ 
+                ")) AND ((? = 1 AND [Dirty] IS NULL) OR ([Dirty] = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -32263,6 +32393,7 @@ Namespace DSAMBTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("missingglue", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "missingglue", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("pressoremark", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "pressoremark", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("airbubble", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "airbubble", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Dirty", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "Dirty", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TranID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TranID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -32387,6 +32518,8 @@ Namespace DSAMBTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_pressoremark", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "pressoremark", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_airbubble", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "airbubble", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_airbubble", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "airbubble", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Dirty", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dirty", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_Dirty", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "Dirty", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -32413,7 +32546,7 @@ Namespace DSAMBTableAdapters
                 "dge, cuttingpanel, heavyprintdefects, NewTouching, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         pr"& _ 
                 "intmissallignament, anymisprint, colourShape, wrongartwork, materialdefects, new"& _ 
                 "openSeam, seamoverlapping, wrinkles, excussglue, missingglue, pressoremark, airb"& _ 
-                "ubble"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_Tran"
+                "ubble, Dirty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_Tran"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -32436,10 +32569,10 @@ Namespace DSAMBTableAdapters
                 " cuttingpanel, heavyprintdefects, NewTouching, printmissallignament, anymisprint"& _ 
                 ", colourShape, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         wrongartwork, materialdefects, newopen"& _ 
                 "Seam, seamoverlapping, wrinkles, excussglue, missingglue, pressoremark, airbubbl"& _ 
-                "e, SystemName)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                "e, SystemName, CBDefect, Dirty)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
                 ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -32522,6 +32655,8 @@ Namespace DSAMBTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("pressoremark", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "pressoremark", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("airbubble", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "airbubble", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("SystemName", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SystemName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("CBDefect", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "CBDefect", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Dirty", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(2,Byte), "Dirty", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -32646,7 +32781,8 @@ Namespace DSAMBTableAdapters
                     ByVal Original_excussglue As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_missingglue As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_pressoremark As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_airbubble As Global.System.Nullable(Of Decimal)) As Integer
+                    ByVal Original_airbubble As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_Dirty As Global.System.Nullable(Of Decimal)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_TranID,Integer)
             If (Original_PO.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -33065,6 +33201,13 @@ Namespace DSAMBTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(122).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(123).Value = Global.System.DBNull.Value
             End If
+            If (Original_Dirty.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(124).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(125).Value = CType(Original_Dirty.Value,Decimal)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(124).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(125).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -33149,7 +33292,8 @@ Namespace DSAMBTableAdapters
                     ByVal excussglue As Global.System.Nullable(Of Decimal),  _
                     ByVal missingglue As Global.System.Nullable(Of Decimal),  _
                     ByVal pressoremark As Global.System.Nullable(Of Decimal),  _
-                    ByVal airbubble As Global.System.Nullable(Of Decimal)) As Integer
+                    ByVal airbubble As Global.System.Nullable(Of Decimal),  _
+                    ByVal Dirty As Global.System.Nullable(Of Decimal)) As Integer
             If (PO.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(PO.Value,Integer)
             Else
@@ -33451,6 +33595,11 @@ Namespace DSAMBTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(64).Value = Global.System.DBNull.Value
             End If
+            If (Dirty.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(65).Value = CType(Dirty.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(65).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -33536,6 +33685,7 @@ Namespace DSAMBTableAdapters
                     ByVal missingglue As Global.System.Nullable(Of Decimal),  _
                     ByVal pressoremark As Global.System.Nullable(Of Decimal),  _
                     ByVal airbubble As Global.System.Nullable(Of Decimal),  _
+                    ByVal Dirty As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_TranID As Integer,  _
                     ByVal Original_PO As Global.System.Nullable(Of Integer),  _
                     ByVal Original_POM As Global.System.Nullable(Of Integer),  _
@@ -33601,7 +33751,8 @@ Namespace DSAMBTableAdapters
                     ByVal Original_excussglue As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_missingglue As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_pressoremark As Global.System.Nullable(Of Decimal),  _
-                    ByVal Original_airbubble As Global.System.Nullable(Of Decimal)) As Integer
+                    ByVal Original_airbubble As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_Dirty As Global.System.Nullable(Of Decimal)) As Integer
             If (PO.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(PO.Value,Integer)
             Else
@@ -33903,423 +34054,435 @@ Namespace DSAMBTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_TranID,Integer)
-            If (Original_PO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_PO.Value,Integer)
+            If (Dirty.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Dirty.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(65).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_TranID,Integer)
+            If (Original_PO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_PO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
             End If
             If (Original_POM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_POM.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_POM.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(69).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
             End If
             If (Original_POD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_POD.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_POD.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(71).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtSize Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ArtSize")
             Else
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_ArtSize,String)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_ArtSize,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_DayID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_DayID,Integer)
             If (Original_HourID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_HourID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_HourID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_LineID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_ProcessID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_LineID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_ProcessID,Integer)
             If (Original_Strength.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_Strength.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_Strength.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
             End If
             If (Original_Present.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_Present.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_Present.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
             End If
             If (Original_PackingStrength.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_PackingStrength.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_PackingStrength.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
             End If
             If (Original_PackingPresent.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_PackingPresent.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_PackingPresent.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtTarget.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_ArtTarget.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_ArtTarget.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtPackingTarget.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_ArtPackingTarget.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_ArtPackingTarget.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtSAM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_ArtSAM.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_ArtSAM.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtPackingSAM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_ArtPackingSAM.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_ArtPackingSAM.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
             End If
             If (Original_Input.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_Input.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_Input.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
             End If
             If (Original_OutPut.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_OutPut.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_OutPut.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
             End If
             If (Original_Rejection.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(Original_Rejection.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_Rejection.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_ClientID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_ModelID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_ArtID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_ClientID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_ModelID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(103).Value = CType(Original_ArtID,Integer)
             If (Original_SeamClosingGlue.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_SeamClosingGlue.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(Original_SeamClosingGlue.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = Global.System.DBNull.Value
             End If
             If (Original_PUC.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_PUC.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(Original_PUC.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = Global.System.DBNull.Value
             End If
             If (Original_CoreCavity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_CoreCavity.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(Original_CoreCavity.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = Global.System.DBNull.Value
             End If
             If (Original_Touching.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_Touching.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(Original_Touching.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(110).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = Global.System.DBNull.Value
             End If
             If (Original_OtherPrintingIssue.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_OtherPrintingIssue.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(Original_OtherPrintingIssue.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(112).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = Global.System.DBNull.Value
             End If
             If (Original_PanelCavity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_PanelCavity.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(Original_PanelCavity.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(114).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = Global.System.DBNull.Value
             End If
             If (Original_OpenSeam.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_OpenSeam.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(Original_OpenSeam.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(116).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = Global.System.DBNull.Value
             End If
             If (Original_SingleOpenStrip.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_SingleOpenStrip.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(Original_SingleOpenStrip.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(118).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = Global.System.DBNull.Value
             End If
             If (Original_UnbondedPanels.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_UnbondedPanels.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(Original_UnbondedPanels.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(120).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = Global.System.DBNull.Value
             End If
             If (Original_ArtWork.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(Original_ArtWork.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(Original_ArtWork.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(122).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = Global.System.DBNull.Value
             End If
             If (Original_Wrinkle.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(Original_Wrinkle.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(Original_Wrinkle.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(124).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = Global.System.DBNull.Value
             End If
             If (Original_ZigZagSeam.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(Original_ZigZagSeam.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(Original_ZigZagSeam.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(126).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = Global.System.DBNull.Value
             End If
             If (Original_OverLap.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(Original_OverLap.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(Original_OverLap.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(128).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = Global.System.DBNull.Value
             End If
             If (Original_PanelDMG.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(Original_PanelDMG.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(Original_PanelDMG.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(130).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = Global.System.DBNull.Value
             End If
             If (Original_BGrade.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(Original_BGrade.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(Original_BGrade.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(132).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = Global.System.DBNull.Value
             End If
             If (Original_MissAlligment.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(Original_MissAlligment.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(Original_MissAlligment.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(134).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = Global.System.DBNull.Value
             End If
             If (Original_DisColor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(Original_DisColor.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(Original_DisColor.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(136).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = Global.System.DBNull.Value
             End If
             If (Original_LogoSmearing.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(Original_LogoSmearing.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(Original_LogoSmearing.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(138).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = Global.System.DBNull.Value
             End If
             If (Original_LogoDoubling.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(Original_LogoDoubling.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(Original_LogoDoubling.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(140).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = Global.System.DBNull.Value
             End If
             If (Original_BarcodeMissing.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(Original_BarcodeMissing.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(Original_BarcodeMissing.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(142).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = Global.System.DBNull.Value
             End If
             If (Original_LargerSpots.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(Original_LargerSpots.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(Original_LargerSpots.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(144).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = Global.System.DBNull.Value
             End If
             If (Original_Smearing.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(Original_Smearing.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(Original_Smearing.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(146).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = Global.System.DBNull.Value
             End If
             If (Original_HFMissAlignment.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(Original_HFMissAlignment.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(Original_HFMissAlignment.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(148).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = Global.System.DBNull.Value
             End If
             If (Original_BlurPrinting.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(Original_BlurPrinting.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(Original_BlurPrinting.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(150).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = Global.System.DBNull.Value
             End If
             If (Original_BallType Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(152).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(Original_BallType,String)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(Original_BallType,String)
             End If
             If (Original_unevenBallSurface.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(Original_unevenBallSurface.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(Original_unevenBallSurface.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(154).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = Global.System.DBNull.Value
             End If
             If (Original_unshapecut.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(Original_unshapecut.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(Original_unshapecut.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(156).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = Global.System.DBNull.Value
             End If
             If (Original_zigzagedge.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(Original_zigzagedge.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(Original_zigzagedge.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(158).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = Global.System.DBNull.Value
             End If
             If (Original_cuttingpanel.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(Original_cuttingpanel.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(Original_cuttingpanel.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(160).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = Global.System.DBNull.Value
             End If
             If (Original_heavyprintdefects.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(Original_heavyprintdefects.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(Original_heavyprintdefects.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(162).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = Global.System.DBNull.Value
             End If
             If (Original_NewTouching.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(Original_NewTouching.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(Original_NewTouching.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(164).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = Global.System.DBNull.Value
             End If
             If (Original_printmissallignament.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(Original_printmissallignament.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(Original_printmissallignament.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(166).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = Global.System.DBNull.Value
             End If
             If (Original_anymisprint.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(Original_anymisprint.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(Original_anymisprint.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(168).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = Global.System.DBNull.Value
             End If
             If (Original_colourShape.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(Original_colourShape.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(Original_colourShape.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(170).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = Global.System.DBNull.Value
             End If
             If (Original_wrongartwork.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(Original_wrongartwork.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(Original_wrongartwork.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(172).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = Global.System.DBNull.Value
             End If
             If (Original_materialdefects.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(Original_materialdefects.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(Original_materialdefects.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(174).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = Global.System.DBNull.Value
             End If
             If (Original_newopenSeam.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(Original_newopenSeam.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(Original_newopenSeam.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(176).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = Global.System.DBNull.Value
             End If
             If (Original_seamoverlapping.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(Original_seamoverlapping.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(Original_seamoverlapping.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(178).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = Global.System.DBNull.Value
             End If
             If (Original_wrinkles.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(Original_wrinkles.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(Original_wrinkles.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(180).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = Global.System.DBNull.Value
             End If
             If (Original_excussglue.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(Original_excussglue.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(Original_excussglue.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(182).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = Global.System.DBNull.Value
             End If
             If (Original_missingglue.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(Original_missingglue.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(Original_missingglue.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(184).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = Global.System.DBNull.Value
             End If
             If (Original_pressoremark.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(Original_pressoremark.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(Original_pressoremark.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(186).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = Global.System.DBNull.Value
             End If
             If (Original_airbubble.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(Original_airbubble.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(Original_airbubble.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(188).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Dirty.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(Original_Dirty.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -34444,7 +34607,9 @@ Namespace DSAMBTableAdapters
                     ByVal missingglue As Global.System.Nullable(Of Decimal),  _
                     ByVal pressoremark As Global.System.Nullable(Of Decimal),  _
                     ByVal airbubble As Global.System.Nullable(Of Decimal),  _
-                    ByVal SystemName As String) As Integer
+                    ByVal SystemName As String,  _
+                    ByVal CBDefect As Global.System.Nullable(Of Decimal),  _
+                    ByVal Dirty As Global.System.Nullable(Of Decimal)) As Integer
             Dim command As Global.System.Data.Odbc.OdbcCommand = Me.CommandCollection(2)
             If (PO.HasValue = true) Then
                 command.Parameters(0).Value = CType(PO.Value,Integer)
@@ -34826,6 +34991,16 @@ Namespace DSAMBTableAdapters
                 command.Parameters(80).Value = Global.System.DBNull.Value
             Else
                 command.Parameters(80).Value = CType(SystemName,String)
+            End If
+            If (CBDefect.HasValue = true) Then
+                command.Parameters(81).Value = CType(CBDefect.Value,Decimal)
+            Else
+                command.Parameters(81).Value = Global.System.DBNull.Value
+            End If
+            If (Dirty.HasValue = true) Then
+                command.Parameters(82).Value = CType(Dirty.Value,Decimal)
+            Else
+                command.Parameters(82).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -36074,6 +36249,8 @@ Namespace DSAMBTableAdapters
             tableMapping.ColumnMappings.Add("unshapecut", "unshapecut")
             tableMapping.ColumnMappings.Add("unevenBallSurface", "unevenBallSurface")
             tableMapping.ColumnMappings.Add("wrongartwork", "wrongartwork")
+            tableMapping.ColumnMappings.Add("CBDefect", "CBDefect")
+            tableMapping.ColumnMappings.Add("Dirty", "Dirty")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -36131,13 +36308,15 @@ Namespace DSAMBTableAdapters
                 "intdefects) AS heavyprintdefects, SUM(tbl_PC_AMB_Hours_Tran.cuttingpanel) AS cut"& _ 
                 "tingpanel, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SUM(tbl_PC_AMB_Hours_Tran.zigzagedge) AS z"& _ 
                 "igzagedge, SUM(tbl_PC_AMB_Hours_Tran.unshapecut) AS unshapecut, SUM(tbl_PC_AMB_H"& _ 
-                "ours_Tran.unevenBallSurface) AS unevenBallSurface"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Ho"& _ 
-                "urs_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours_Tran"& _ 
-                ".LineID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_Hours_Tran.DayID = tbl_Inv_Tran_"& _ 
-                "Date.DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID = ?) AND (tbl_PC_AMB_Hours_Tran."& _ 
-                "LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_PC_AMB_Hours_Tran.ClientID = ?) "& _ 
-                "AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl_PC_AMB_Hours_Tran.ArtID = ?) AN"& _ 
-                "D (tbl_Inv_Tran_Date.DayNo = ?) AND (tbl_PC_AMB_Hours_Tran.SysIP = ?)"
+                "ours_Tran.unevenBallSurface) AS unevenBallSurface, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SU"& _ 
+                "M(tbl_PC_AMB_Hours_Tran.CBDefect) AS CBDefect, SUM(tbl_PC_AMB_Hours_Tran.Dirty) "& _ 
+                "AS Dirty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_D"& _ 
+                "ate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours_Tran.LineID = tbl_PC_AMB_Line.LineID AND tbl_"& _ 
+                "PC_AMB_Hours_Tran.DayID = tbl_Inv_Tran_Date.DayNo AND (tbl_PC_AMB_Hours_Tran.Pro"& _ 
+                "cessID = ?) AND (tbl_PC_AMB_Hours_Tran.LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       "& _ 
+                "  (tbl_PC_AMB_Hours_Tran.ClientID = ?) AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) A"& _ 
+                "ND (tbl_PC_AMB_Hours_Tran.ArtID = ?) AND (tbl_Inv_Tran_Date.DayNo = ?) AND (tbl_"& _ 
+                "PC_AMB_Hours_Tran.SysIP = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("LineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -36174,13 +36353,14 @@ Namespace DSAMBTableAdapters
                 "Spots, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SUM(tbl_PC_AMB_Hours_Tran.Smearing) AS Smearin"& _ 
                 "g, SUM(tbl_PC_AMB_Hours_Tran.HFMissAlignment) AS HFMissAlignment, SUM(tbl_PC_AMB"& _ 
                 "_Hours_Tran.RCheck) AS RCheck, SUM(tbl_PC_AMB_Hours_Tran.RPass) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
-                "           AS RPass, SUM(tbl_PC_AMB_Hours_Tran.BlurPrinting) AS BlurPrinting"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
-                "OM            tbl_PC_AMB_Hours_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  "& _ 
-                "      tbl_PC_AMB_Hours_Tran.LineID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_Hours"& _ 
-                "_Tran.DayID = tbl_Inv_Tran_Date.DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID = ?) "& _ 
-                "AND (tbl_PC_AMB_Hours_Tran.LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_PC_AM"& _ 
-                "B_Hours_Tran.ClientID = ?) AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl_PC_A"& _ 
-                "MB_Hours_Tran.ArtID = ?) AND (tbl_Inv_Tran_Date.DayNo = ?)"
+                "           AS RPass, SUM(tbl_PC_AMB_Hours_Tran.BlurPrinting) AS BlurPrinting, SU"& _ 
+                "M(tbl_PC_AMB_Hours_Tran.CBDefect) AS CBDefect"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_"& _ 
+                "Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours_Tran.Lin"& _ 
+                "eID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_Hours_Tran.DayID = tbl_Inv_Tran_Date"& _ 
+                ".DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID = ?) AND (tbl_PC_AMB_Hours_Tran.Line"& _ 
+                "ID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_PC_AMB_Hours_Tran.ClientID = ?) AND "& _ 
+                "(tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl_PC_AMB_Hours_Tran.ArtID = ?) AND (t"& _ 
+                "bl_Inv_Tran_Date.DayNo = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("LineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
