@@ -154,3 +154,27 @@ D:\AMB_pck\AMB_Froming\obj\Debug\AMB_Froming.application
 D:\AMB_pck\AMB_Froming\obj\Debug\AMB_Froming.exe
 D:\AMB_pck\AMB_Froming\obj\Debug\AMB_Froming.xml
 D:\AMB_pck\AMB_Froming\obj\Debug\AMB_Froming.pdb
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.exe.config
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.exe.manifest
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.application
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.exe
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.pdb
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\bin\Debug\AMB_Froming.xml
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.vbproj.AssemblyReference.cache
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.vbproj.SuggestedBindingRedirects.cache
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.AlertBox.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.Form1.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.FressAlert.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.FrmNewReports.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.NewRepots.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.RepairBalance.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.RepairFail.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.Reports.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.Resources.resources
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.vbproj.GenerateResource.cache
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.vbproj.CoreCompileInputs.cache
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.exe.manifest
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.application
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.exe
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.xml
+D:\desktop ap\Amb_Packing_Station\AMB_Froming\obj\Debug\AMB_Froming.pdb

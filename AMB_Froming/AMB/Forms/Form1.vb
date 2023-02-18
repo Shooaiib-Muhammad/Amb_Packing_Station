@@ -1121,7 +1121,7 @@ Public Class Form1
         'If barCodeNo.Length = 0 Then
         If barCodeNo.Length > 0 Then
 
-            If barCodeNo.Length = 13 Then
+            If barCodeNo.Length >= 12 Then
                 If RadioButton11.Checked = True Then
                     Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
 
