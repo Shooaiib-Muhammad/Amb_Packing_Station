@@ -1121,7 +1121,7 @@ Public Class Form1
         'If barCodeNo.Length = 0 Then
         If barCodeNo.Length > 0 Then
 
-            If barCodeNo.Length >= 12 Then
+            If barCodeNo.Length = 12 Then
                 If RadioButton11.Checked = True Then
                     Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
 
@@ -1141,7 +1141,22 @@ Public Class Form1
 
 
 
+            ElseIf barCodeNo.Length = 13 Then
+                If RadioButton11.Checked = True Then
+                    Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
 
+
+                    Entry(barCodeNo)
+                    txtCardNo.Text = ""
+                    txtCardNo.Focus()
+                ElseIf RadioButton10.Checked = True Then
+                    If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
+                        txtCardNo.Text = ""
+                    Else
+                        MsgBox("Article is not register")
+
+                    End If
+                End If
 
             End If
 
