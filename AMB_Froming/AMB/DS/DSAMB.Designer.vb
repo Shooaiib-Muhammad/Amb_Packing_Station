@@ -6017,6 +6017,8 @@ Partial Public Class DSAMB
         
         Private columnDirty As Global.System.Data.DataColumn
         
+        Private columnNewDirty As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -6493,6 +6495,14 @@ Partial Public Class DSAMB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property NewDirtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNewDirty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6584,9 +6594,10 @@ Partial Public Class DSAMB
                     ByVal unevenBallSurface As Decimal,  _
                     ByVal wrongartwork As Decimal,  _
                     ByVal CBDefect As Decimal,  _
-                    ByVal Dirty As Decimal) As View_AMb_Article_Wise_SumRow
+                    ByVal Dirty As Decimal,  _
+                    ByVal NewDirty As Decimal) As View_AMb_Article_Wise_SumRow
             Dim rowView_AMb_Article_Wise_SumRow As View_AMb_Article_Wise_SumRow = CType(Me.NewRow,View_AMb_Article_Wise_SumRow)
-            Dim columnValuesArray() As Object = New Object() {PanelDMG, OverLap, ZigZagSeam, Wrinkle, ArtWork, UnbondedPanels, SingleOpenStrip, OpenSeam, PanelCavity, Touching, OtherPrintingIssue, CoreCavity, PUC, SeamClosingGlue, BGrade, TotalChecked, Pass, Fail, StraightCut, CuttingResidual, ConnectionBreak, UncureGlue, ExcessiveGlue, OverUnderWght, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, RCheck, RPass, BlurPrinting, airbubble, pressoremark, missingglue, excussglue, wrinkles, seamoverlapping, newopenSeam, materialdefects, colourShape, anymisprint, printmissallignament, NewTouching, heavyprintdefects, cuttingpanel, zigzagedge, unshapecut, unevenBallSurface, wrongartwork, CBDefect, Dirty}
+            Dim columnValuesArray() As Object = New Object() {PanelDMG, OverLap, ZigZagSeam, Wrinkle, ArtWork, UnbondedPanels, SingleOpenStrip, OpenSeam, PanelCavity, Touching, OtherPrintingIssue, CoreCavity, PUC, SeamClosingGlue, BGrade, TotalChecked, Pass, Fail, StraightCut, CuttingResidual, ConnectionBreak, UncureGlue, ExcessiveGlue, OverUnderWght, MissAlligment, DisColor, LogoSmearing, LogoDoubling, BarcodeMissing, LargerSpots, Smearing, HFMissAlignment, RCheck, RPass, BlurPrinting, airbubble, pressoremark, missingglue, excussglue, wrinkles, seamoverlapping, newopenSeam, materialdefects, colourShape, anymisprint, printmissallignament, NewTouching, heavyprintdefects, cuttingpanel, zigzagedge, unshapecut, unevenBallSurface, wrongartwork, CBDefect, Dirty, NewDirty}
             rowView_AMb_Article_Wise_SumRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowView_AMb_Article_Wise_SumRow)
             Return rowView_AMb_Article_Wise_SumRow
@@ -6664,6 +6675,7 @@ Partial Public Class DSAMB
             Me.columnwrongartwork = MyBase.Columns("wrongartwork")
             Me.columnCBDefect = MyBase.Columns("CBDefect")
             Me.columnDirty = MyBase.Columns("Dirty")
+            Me.columnNewDirty = MyBase.Columns("NewDirty")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6779,6 +6791,8 @@ Partial Public Class DSAMB
             MyBase.Columns.Add(Me.columnCBDefect)
             Me.columnDirty = New Global.System.Data.DataColumn("Dirty", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDirty)
+            Me.columnNewDirty = New Global.System.Data.DataColumn("NewDirty", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNewDirty)
             Me.columnMissAlligment.ReadOnly = true
             Me.columnDisColor.ReadOnly = true
             Me.columnLogoSmearing.ReadOnly = true
@@ -6810,6 +6824,7 @@ Partial Public Class DSAMB
             Me.columnwrongartwork.ReadOnly = true
             Me.columnCBDefect.ReadOnly = true
             Me.columnDirty.ReadOnly = true
+            Me.columnNewDirty.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20725,6 +20740,21 @@ Partial Public Class DSAMB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property NewDirty() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableView_AMb_Article_Wise_Sum.NewDirtyColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NewDirty' in table 'View_AMb_Article Wise_Sum' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableView_AMb_Article_Wise_Sum.NewDirtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsPanelDMGNull() As Boolean
             Return Me.IsNull(Me.tableView_AMb_Article_Wise_Sum.PanelDMGColumn)
         End Function
@@ -21381,6 +21411,18 @@ Partial Public Class DSAMB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetDirtyNull()
             Me(Me.tableView_AMb_Article_Wise_Sum.DirtyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsNewDirtyNull() As Boolean
+            Return Me.IsNull(Me.tableView_AMb_Article_Wise_Sum.NewDirtyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetNewDirtyNull()
+            Me(Me.tableView_AMb_Article_Wise_Sum.NewDirtyColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -36251,6 +36293,7 @@ Namespace DSAMBTableAdapters
             tableMapping.ColumnMappings.Add("wrongartwork", "wrongartwork")
             tableMapping.ColumnMappings.Add("CBDefect", "CBDefect")
             tableMapping.ColumnMappings.Add("Dirty", "Dirty")
+            tableMapping.ColumnMappings.Add("NewDirty", "NewDirty")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -36310,13 +36353,13 @@ Namespace DSAMBTableAdapters
                 "igzagedge, SUM(tbl_PC_AMB_Hours_Tran.unshapecut) AS unshapecut, SUM(tbl_PC_AMB_H"& _ 
                 "ours_Tran.unevenBallSurface) AS unevenBallSurface, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SU"& _ 
                 "M(tbl_PC_AMB_Hours_Tran.CBDefect) AS CBDefect, SUM(tbl_PC_AMB_Hours_Tran.Dirty) "& _ 
-                "AS Dirty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_D"& _ 
-                "ate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours_Tran.LineID = tbl_PC_AMB_Line.LineID AND tbl_"& _ 
-                "PC_AMB_Hours_Tran.DayID = tbl_Inv_Tran_Date.DayNo AND (tbl_PC_AMB_Hours_Tran.Pro"& _ 
-                "cessID = ?) AND (tbl_PC_AMB_Hours_Tran.LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       "& _ 
-                "  (tbl_PC_AMB_Hours_Tran.ClientID = ?) AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) A"& _ 
-                "ND (tbl_PC_AMB_Hours_Tran.ArtID = ?) AND (tbl_Inv_Tran_Date.DayNo = ?) AND (tbl_"& _ 
-                "PC_AMB_Hours_Tran.SysIP = ?)"
+                "AS Dirty, SUM(tbl_PC_AMB_Hours_Tran.Dirty) AS NewDirty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_A"& _ 
+                "MB_Hours_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours"& _ 
+                "_Tran.LineID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_Hours_Tran.DayID = tbl_Inv_"& _ 
+                "Tran_Date.DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID = ?) AND (tbl_PC_AMB_Hours_"& _ 
+                "Tran.LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_PC_AMB_Hours_Tran.ClientID "& _ 
+                "= ?) AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl_PC_AMB_Hours_Tran.ArtID = "& _ 
+                "?) AND (tbl_Inv_Tran_Date.DayNo = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("LineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -36324,7 +36367,6 @@ Namespace DSAMBTableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArtID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayNo", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayNo", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("SysIP", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SysIP", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(1) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT        SUM(tbl_PC_AMB_Hours_Tran.PanelDMG) AS PanelDMG, SUM(tbl_PC_AMB_Hou"& _ 
@@ -36354,13 +36396,14 @@ Namespace DSAMBTableAdapters
                 "g, SUM(tbl_PC_AMB_Hours_Tran.HFMissAlignment) AS HFMissAlignment, SUM(tbl_PC_AMB"& _ 
                 "_Hours_Tran.RCheck) AS RCheck, SUM(tbl_PC_AMB_Hours_Tran.RPass) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
                 "           AS RPass, SUM(tbl_PC_AMB_Hours_Tran.BlurPrinting) AS BlurPrinting, SU"& _ 
-                "M(tbl_PC_AMB_Hours_Tran.CBDefect) AS CBDefect"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_"& _ 
-                "Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        tbl_PC_AMB_Hours_Tran.Lin"& _ 
-                "eID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_Hours_Tran.DayID = tbl_Inv_Tran_Date"& _ 
-                ".DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID = ?) AND (tbl_PC_AMB_Hours_Tran.Line"& _ 
-                "ID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_PC_AMB_Hours_Tran.ClientID = ?) AND "& _ 
-                "(tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl_PC_AMB_Hours_Tran.ArtID = ?) AND (t"& _ 
-                "bl_Inv_Tran_Date.DayNo = ?)"
+                "M(tbl_PC_AMB_Hours_Tran.CBDefect) AS CBDefect, SUM(tbl_PC_AMB_Hours_Tran.Dirty) "& _ 
+                "AS Dirty, SUM(tbl_PC_AMB_Hours_Tran.Dirty) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AS NewDirt"& _ 
+                "y"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_PC_AMB_Hours_Tran, tbl_PC_AMB_Line, tbl_Inv_Tran_Date"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
+                "ERE        tbl_PC_AMB_Hours_Tran.LineID = tbl_PC_AMB_Line.LineID AND tbl_PC_AMB_"& _ 
+                "Hours_Tran.DayID = tbl_Inv_Tran_Date.DayNo AND (tbl_PC_AMB_Hours_Tran.ProcessID "& _ 
+                "= ?) AND (tbl_PC_AMB_Hours_Tran.LineID = ?) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tbl_"& _ 
+                "PC_AMB_Hours_Tran.ClientID = ?) AND (tbl_PC_AMB_Hours_Tran.ModelID = ?) AND (tbl"& _ 
+                "_PC_AMB_Hours_Tran.ArtID = ?) AND (tbl_Inv_Tran_Date.DayNo = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("LineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -36374,7 +36417,7 @@ Namespace DSAMBTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSAMB.View_AMb_Article_Wise_SumDataTable, ByVal ProcessID As Integer, ByVal LineID As Integer, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArtID As Integer, ByVal DayNo As Integer, ByVal SysIP As String) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSAMB.View_AMb_Article_Wise_SumDataTable, ByVal ProcessID As Integer, ByVal LineID As Integer, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArtID As Integer, ByVal DayNo As Integer) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(ProcessID,Integer)
             Me.Adapter.SelectCommand.Parameters(1).Value = CType(LineID,Integer)
@@ -36382,11 +36425,6 @@ Namespace DSAMBTableAdapters
             Me.Adapter.SelectCommand.Parameters(3).Value = CType(ModelID,Integer)
             Me.Adapter.SelectCommand.Parameters(4).Value = CType(ArtID,Integer)
             Me.Adapter.SelectCommand.Parameters(5).Value = CType(DayNo,Integer)
-            If (SysIP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(6).Value = CType(SysIP,String)
-            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -36398,7 +36436,7 @@ Namespace DSAMBTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal ProcessID As Integer, ByVal LineID As Integer, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArtID As Integer, ByVal DayNo As Integer, ByVal SysIP As String) As DSAMB.View_AMb_Article_Wise_SumDataTable
+        Public Overloads Overridable Function GetData(ByVal ProcessID As Integer, ByVal LineID As Integer, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArtID As Integer, ByVal DayNo As Integer) As DSAMB.View_AMb_Article_Wise_SumDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(ProcessID,Integer)
             Me.Adapter.SelectCommand.Parameters(1).Value = CType(LineID,Integer)
@@ -36406,11 +36444,6 @@ Namespace DSAMBTableAdapters
             Me.Adapter.SelectCommand.Parameters(3).Value = CType(ModelID,Integer)
             Me.Adapter.SelectCommand.Parameters(4).Value = CType(ArtID,Integer)
             Me.Adapter.SelectCommand.Parameters(5).Value = CType(DayNo,Integer)
-            If (SysIP Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(6).Value = CType(SysIP,String)
-            End If
             Dim dataTable As DSAMB.View_AMb_Article_Wise_SumDataTable = New DSAMB.View_AMb_Article_Wise_SumDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

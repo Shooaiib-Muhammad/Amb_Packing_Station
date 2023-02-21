@@ -189,7 +189,7 @@ Public Class Form1
         Label33.Text = Format(Val(Label33.Text), "0")
         Label29.Text = Val(Label20.Text) + Val(Label66.Text) + Val(Label13.Text) + Val(Label11.Text) + Val(Label12.Text)
         Label29.Text = Format(Val(Label29.Text), "0")
-        Label30.Text = Val(Label49.Text) + Val(Label14.Text) + Val(Label60.Text) + Val(Label22.Text) + Val(Label18.Text) + Val(Label17.Text) + Val(Label65.Text) + Val(Label24.Text) + Val(Label58.Text) + Val(Label74.Text)
+        Label30.Text = Val(Label73.Text) + Val(Label76.Text) + Val(Label49.Text) + Val(Label14.Text) + Val(Label60.Text) + Val(Label22.Text) + Val(Label18.Text) + Val(Label17.Text) + Val(Label65.Text) + Val(Label24.Text) + Val(Label58.Text) + Val(Label74.Text)
         Label30.Text = Format(Val(Label30.Text), "0")
         Dim ArtFail = Val(Label86.Text) - Val(Label45.Text)
         Label43.Text = ArtFail
@@ -677,11 +677,14 @@ Public Class Form1
         values()
     End Sub
     Private Sub Data()
+        Dim Dirty As Int64
 
         Claeartextbox()
 
         Try
-            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text), Label37.Text)
+            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text))
+            Dirty = DSAMB.View_AMb_Article_Wise_Sum.Rows(0).Item("NewDirty")
+            Label76.Text = Dirty
             Me.View_AMb_FormingTableAdapter.Fill(Me.DSAMB.View_AMb_Forming, 2, Val(DayNoLabel1.Text), Label37.Text)
         Catch ex As System.Exception
 
@@ -1119,46 +1122,29 @@ Public Class Form1
         barCodeNo = txtCardNo.Text
 
         'If barCodeNo.Length = 0 Then
-        If barCodeNo.Length > 0 Then
+        If barCodeNo.Length = 13 Then
 
-            If barCodeNo.Length = 12 Then
-                If RadioButton11.Checked = True Then
-                    Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
+            'If length = 12 Then
+            If RadioButton11.Checked = True Then
+                Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
 
 
-                    Entry(barCodeNo)
+                Entry(barCodeNo)
+                txtCardNo.Text = ""
+                txtCardNo.Focus()
+            ElseIf RadioButton10.Checked = True Then
+                If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
                     txtCardNo.Text = ""
-                    txtCardNo.Focus()
-                ElseIf RadioButton10.Checked = True Then
-                    If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
-                        txtCardNo.Text = ""
-                    Else
-                        MsgBox("Article is not register")
+                Else
+                    MsgBox("Article is not register")
 
-                    End If
                 End If
-
-
-
-
-            ElseIf barCodeNo.Length = 13 Then
-                If RadioButton11.Checked = True Then
-                    Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
-
-
-                    Entry(barCodeNo)
-                    txtCardNo.Text = ""
-                    txtCardNo.Focus()
-                ElseIf RadioButton10.Checked = True Then
-                    If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
-                        txtCardNo.Text = ""
-                    Else
-                        MsgBox("Article is not register")
-
-                    End If
-                End If
-
             End If
+
+
+
+
+
 
 
 
@@ -1236,6 +1222,39 @@ Public Class Form1
         Dirty = 1
         clickDefect(Button41)
     End Sub
+
+    Private Sub txtCardNo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCardNo.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Dim barCodeNo As String
+
+            barCodeNo = txtCardNo.Text
+
+            'If barCodeNo.Length = 0 Then
+            If barCodeNo.Length > 11 Then
+
+                'If length = 12 Then
+                If RadioButton11.Checked = True Then
+                    Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo)
+
+
+                    Entry(barCodeNo)
+                    txtCardNo.Text = ""
+                    txtCardNo.Focus()
+                ElseIf RadioButton10.Checked = True Then
+                    If Me.View_Pro_Article_BarCodeTableAdapter.Fill(Me.DSproduction.View_Pro_Article_BarCode, barCodeNo) > 0 Then
+                        txtCardNo.Text = ""
+                    Else
+                        MsgBox("Article is not register")
+
+                    End If
+                End If
+
+
+            End If
+        End If
+    End Sub
+
+
 
 
     'Private Sub ClcikBtn(Button)

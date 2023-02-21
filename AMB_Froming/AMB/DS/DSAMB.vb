@@ -8,7 +8,14 @@
 End Class
 
 Namespace DSAMBTableAdapters
+    Partial Public Class View_Daily_SumTableAdapter
+    End Class
 
     Partial Public Class tbl_PC_AMB_Hours_TranTableAdapter
+    End Class
+End Namespace
+
+Namespace DSAMBTableAdapters
+    Partial Public Class View_AMb_Article_Wise_SumTableAdapter
     End Class
 End Namespace
