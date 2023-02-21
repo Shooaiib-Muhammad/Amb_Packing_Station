@@ -682,9 +682,11 @@ Public Class Form1
         Claeartextbox()
 
         Try
-            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text))
+            Me.View_AMb_Article_Wise_SumTableAdapter.Fill(Me.DSAMB.View_AMb_Article_Wise_Sum, 2, LineID, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text), Label37.Text)
             Dirty = DSAMB.View_AMb_Article_Wise_Sum.Rows(0).Item("NewDirty")
             Label76.Text = Dirty
+            Me.View_Article_Wise_SUmTableAdapter.Fill(Me.DSAMB.view_Article_Wise_SUm, Val(ClientID.Text), Val(ModelID.Text), Val(ArtID.Text), Val(DayNoLabel1.Text), Label37.Text)
+
             Me.View_AMb_FormingTableAdapter.Fill(Me.DSAMB.View_AMb_Forming, 2, Val(DayNoLabel1.Text), Label37.Text)
         Catch ex As System.Exception
 
@@ -1253,6 +1255,8 @@ Public Class Form1
             End If
         End If
     End Sub
+
+
 
 
 

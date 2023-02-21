@@ -150,6 +150,7 @@ Partial Class Form1
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label86 = New System.Windows.Forms.Label()
+        Me.View_Article_Wise_SUmBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
@@ -216,6 +217,7 @@ Partial Class Form1
         Me.View_Pro_Article_BarCodeTableAdapter = New AMB_Froming.DSproductionTableAdapters.View_Pro_Article_BarCodeTableAdapter()
         Me.TableAdapterManager1 = New AMB_Froming.DSproductionTableAdapters.TableAdapterManager()
         Me.Label72 = New System.Windows.Forms.Label()
+        Me.View_Article_Wise_SUmTableAdapter = New AMB_Froming.DSAMBTableAdapters.view_Article_Wise_SUmTableAdapter()
         Label34 = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
@@ -241,6 +243,7 @@ Partial Class Form1
         CType(Me.View_Repair_QtyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.View_Daily_SumBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
+        CType(Me.View_Article_Wise_SUmBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.View_Article_Wise_FailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_PC_AMB_Hours_TranBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -328,9 +331,9 @@ Partial Class Form1
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1743, 40)
+        Me.Label5.Size = New System.Drawing.Size(1813, 40)
         Me.Label5.TabIndex = 83
-        Me.Label5.Text = "Airless Mini Ball Packing v 1.1"
+        Me.Label5.Text = "Airless Mini Ball Packing v 2.1"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel3
@@ -1740,7 +1743,7 @@ Partial Class Form1
         '
         Me.Label75.AutoSize = True
         Me.Label75.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Label75.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_Pro_ArticleBindingSource, "ArtCode", True))
+        Me.Label75.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_Pro_Article_BarCodeBindingSource, "ArtCode", True))
         Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label75.ForeColor = System.Drawing.Color.White
         Me.Label75.Location = New System.Drawing.Point(29, 9)
@@ -1751,8 +1754,9 @@ Partial Class Form1
         '
         'Label86
         '
+        Me.Label86.BackColor = System.Drawing.Color.White
         Me.Label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label86.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_AMb_Article_Wise_SumBindingSource, "TotalChecked", True))
+        Me.Label86.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_Article_Wise_SUmBindingSource, "TotalChecked", True))
         Me.Label86.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label86.Location = New System.Drawing.Point(142, 39)
         Me.Label86.Name = "Label86"
@@ -1760,6 +1764,11 @@ Partial Class Form1
         Me.Label86.TabIndex = 55598
         Me.Label86.Text = "Label86"
         Me.Label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'View_Article_Wise_SUmBindingSource
+        '
+        Me.View_Article_Wise_SUmBindingSource.DataMember = "view_Article_Wise_SUm"
+        Me.View_Article_Wise_SUmBindingSource.DataSource = Me.DSAMB
         '
         'Label55
         '
@@ -1801,7 +1810,7 @@ Partial Class Form1
         '
         Me.Label43.BackColor = System.Drawing.Color.White
         Me.Label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label43.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_AMb_Article_Wise_SumBindingSource, "Fail", True))
+        Me.Label43.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_Article_Wise_SUmBindingSource, "Fail", True))
         Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label43.Location = New System.Drawing.Point(143, 91)
         Me.Label43.Name = "Label43"
@@ -1824,7 +1833,7 @@ Partial Class Form1
         '
         Me.Label45.BackColor = System.Drawing.Color.White
         Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label45.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_AMb_Article_Wise_SumBindingSource, "Pass", True))
+        Me.Label45.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_Article_Wise_SUmBindingSource, "Pass", True))
         Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label45.Location = New System.Drawing.Point(143, 65)
         Me.Label45.Name = "Label45"
@@ -2033,6 +2042,7 @@ Partial Class Form1
         '
         'Label38
         '
+        Me.Label38.BackColor = System.Drawing.Color.White
         Me.Label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label38.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_AMb_FormingBindingSource, "TotalChecked", True))
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
@@ -2383,12 +2393,16 @@ Partial Class Form1
         Me.Label72.TabIndex = 55605
         Me.Label72.Text = "Label72"
         '
+        'View_Article_Wise_SUmTableAdapter
+        '
+        Me.View_Article_Wise_SUmTableAdapter.ClearBeforeFill = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1743, 1012)
+        Me.ClientSize = New System.Drawing.Size(1813, 1032)
         Me.Controls.Add(Me.Label72)
         Me.Controls.Add(Me.Button39)
         Me.Controls.Add(Me.ClientID)
@@ -2448,6 +2462,7 @@ Partial Class Form1
         CType(Me.View_Daily_SumBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        CType(Me.View_Article_Wise_SUmBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.View_Article_Wise_FailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_PC_AMB_Hours_TranBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2650,4 +2665,6 @@ Partial Class Form1
     Friend WithEvents Button41 As Button
     Friend WithEvents Label74 As Label
     Friend WithEvents Label76 As Label
+    Friend WithEvents View_Article_Wise_SUmBindingSource As BindingSource
+    Friend WithEvents View_Article_Wise_SUmTableAdapter As DSAMBTableAdapters.view_Article_Wise_SUmTableAdapter
 End Class
