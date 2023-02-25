@@ -2403,6 +2403,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1813, 1032)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label72)
         Me.Controls.Add(Me.Button39)
         Me.Controls.Add(Me.ClientID)
@@ -2437,9 +2438,9 @@ Partial Class Form1
         Me.Controls.Add(Me.LineNameComboBox)
         Me.Controls.Add(LineNameLabel)
         Me.Controls.Add(Me.Button1)
+        Me.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Airless Mini Ball Packing"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         Me.Panel3.ResumeLayout(False)
         CType(Me.DSAMB, System.ComponentModel.ISupportInitialize).EndInit()
